@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Social Media Marketing | Zigma Software</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/js/tailwind.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Shared Style Guidance Mapping -->
@@ -219,7 +219,7 @@
 <section class="relative overflow-hidden bg-[#001D35] py-xl min-h-[600px] flex items-center">
 <!-- Dark Overlay & Background Image -->
 <div class="absolute inset-0 z-0 opacity-40">
-<img alt="Social Media Management" class="w-full h-full object-cover" data-alt="A professional close-up of high-end mobile devices and tablets displaying colorful social media analytics dashboards and engagement metrics. The lighting is dramatic with a deep navy and cool blue color grade, emphasizing a high-tech and corporate aesthetic. Soft glowing digital icons representing global connectivity float subtly in the background against a dark, sophisticated gradient environment." src="https://lh3.googleusercontent.com/aida/AP1WRLvWIwFz7GSYSGHAwtAinjxG4rsgenzfWpAgRNJMnAXnuSEWdhu7sRfqBsNqjxsGJud4psM8XyETyGEnVTeiaQoCyBCSXD_rirDIF0fOnO_d-0KC_PcvwkN1dSuYDHHHYJgSgvYByajM54wJEEDECAptkKxCYR0V0zc6VvgC--2Z8kgwHIMkPhKQfBee7GgMQrNRLXTxSFU8wZunWMQeVjaBpVjWwBCzyEYtilYUyZWNxIQYuEhQoCiJeLiQ"/>
+<img alt="Social Media Management" class="w-full h-full object-cover" data-alt="A professional close-up of high-end mobile devices and tablets displaying colorful social media analytics dashboards and engagement metrics. The lighting is dramatic with a deep navy and cool blue color grade, emphasizing a high-tech and corporate aesthetic. Soft glowing digital icons representing global connectivity float subtly in the background against a dark, sophisticated gradient environment." src="assets/images/hero_command_center.png"/>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-container-margin-desktop w-full text-center text-white">
 <div class="inline-flex items-center gap-xs px-md py-xs bg-white/10 rounded-full mb-lg text-primary-fixed-dim">
@@ -324,7 +324,7 @@
 <div class="max-w-7xl mx-auto px-container-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
 <div class="relative group">
 <div class="absolute -inset-4 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
-<img alt="Team Collaboration" class="relative rounded-2xl shadow-2xl w-full hover:scale-[1.02] transition-transform duration-500" data-alt="A diverse team of creative professionals collaborating in a bright, modern glass-walled office space. They are interacting with a large digital touchscreen displaying vibrant social media campaign layouts and real-time audience engagement graphs. The aesthetic is clean and high-end light-mode, with a focus on sophisticated blue and silver tones. The atmosphere is energetic, professional, and forward-thinking." src="https://lh3.googleusercontent.com/aida/AP1WRLs_0Bt5nCDdtA8LFlEm_dHqnEA7lJmQAp9kzWSIDIfY5AeGSKCh8p6nZ37NQpjCPFA82qfH095qRLghVZx0IdmtXrLmeqcpOIhGJYsSpjgiljmBoQxmjPnKjdOVcKWfU98pHEuzsbl--108jpGsRmxKe5QZUG1GsgsTp51yKv0nSo1klccYOryk4yT0k-_3DbfsLgnNPNwscagmB67YffFspiSAY4WQ3yJOv3KQYAq3TIzWnBnvcVw1LZzN"/>
+<img alt="Team Collaboration" class="relative rounded-2xl shadow-2xl w-full hover:scale-[1.02] transition-transform duration-500" data-alt="A diverse team of creative professionals collaborating in a bright, modern glass-walled office space. They are interacting with a large digital touchscreen displaying vibrant social media campaign layouts and real-time audience engagement graphs. The aesthetic is clean and high-end light-mode, with a focus on sophisticated blue and silver tones. The atmosphere is energetic, professional, and forward-thinking." src="assets/images/hero_command_center.png"/>
 <div class="absolute -bottom-10 -right-10 bg-white p-lg rounded-xl shadow-xl hidden md:block border border-outline-variant">
 <div class="flex items-center gap-md">
 <div class="w-12 h-12 bg-primary flex items-center justify-center rounded-full">
@@ -395,27 +395,37 @@
 <div class="grid grid-cols-2 md:grid-cols-5 gap-md">
 <!-- Facebook -->
 <div class="bg-white p-lg rounded-[18px] border border-outline-variant hover:bg-gradient-to-br hover:from-primary hover:to-primary-container group transition-all duration-300 hover:-translate-y-2">
-<img alt="Facebook" class="w-16 h-16 mx-auto mb-md group-hover:brightness-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvIiVKhxbMomRKv9IADadeQ7CVfzjqJLQAVATul-2Eu7x9XxvtKsdS1FHAIYWkAmaDLzqUrUS1z7w97lNhvU2TKkeg-yeHkKkpd-laoRcwqedzS_PqEjRMH0w3sOFY2mTFukrhqEpJo1lsXNBj4od-ZDife-m6rjHnvFLlgtt35ogyI9Dq0wNKWzfYaE7DMnEuLU7oxUn2rZ8Qm3ddxXESw2IK8OgltLuNIHEAWF_xYGz1_9jWECG0XXb8"/>
+<svg class="w-16 h-16 mx-auto mb-md text-[#1877F2] group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+</svg>
 <p class="font-title-lg text-title-lg group-hover:text-white transition-colors">Facebook</p>
 </div>
 <!-- Instagram -->
 <div class="bg-white p-lg rounded-[18px] border border-outline-variant hover:bg-gradient-to-br hover:from-pink-600 hover:to-orange-500 group transition-all duration-300 hover:-translate-y-2">
-<img alt="Instagram" class="w-16 h-16 mx-auto mb-md group-hover:brightness-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvD96GiaCh4UVbwFVnvQdWxcAOSFs5gfPFEWyRTbySV-GLqEsVJealNOg91XWL1Z-FVfcPjiR5V4LhQOELVdo1OI50B357F9VIH5C0EG1eFB0dprvdTFnLuCPnYvlO9kyggumVwQqUKsllxbujSpw8rgdE1UHawKmLSHT4Xib0n0-5UjMG0QXZcXtRCWOYnnJ66rD-9HYRFuGkbni4eKKSSDZQZiLRetEMBazBafYFcp6Zy9yVov3r4-zRs"/>
+<svg class="w-16 h-16 mx-auto mb-md text-[#E1306C] group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+</svg>
 <p class="font-title-lg text-title-lg group-hover:text-white transition-colors">Instagram</p>
 </div>
 <!-- LinkedIn -->
 <div class="bg-white p-lg rounded-[18px] border border-outline-variant hover:bg-gradient-to-br hover:from-blue-700 hover:to-blue-900 group transition-all duration-300 hover:-translate-y-2">
-<img alt="LinkedIn" class="w-16 h-16 mx-auto mb-md group-hover:brightness-110" src="https://lh3.googleusercontent.com/aida/AP1WRLv9EFjMCuwNoSLI_SY-RaA0wz5DSy9WTDIQUZ6PgKyU0-XrRSsKufnAoVWSVomn5492byM-DrmP772k94rF_aEbIb2m24dJajte7OMuX50vY_cOd6IsChl1mcqp9YUfFJeu_gyaYg5nud6_CbyxD7sWFbcJL5S1DGlkiDkRy1_FIiHrSl_ipMgWELByAOdsSMjDYEz-KS2tQ7odqX0BCft_OnrI5OKV1GJgSXGY9OP336bKnxoKbQG0VGHM"/>
+<svg class="w-16 h-16 mx-auto mb-md text-[#0A66C2] group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+</svg>
 <p class="font-title-lg text-title-lg group-hover:text-white transition-colors">LinkedIn</p>
 </div>
 <!-- YouTube -->
 <div class="bg-white p-lg rounded-[18px] border border-outline-variant hover:bg-gradient-to-br hover:from-red-600 hover:to-red-800 group transition-all duration-300 hover:-translate-y-2">
-<img alt="YouTube" class="w-16 h-16 mx-auto mb-md group-hover:brightness-110" src="https://lh3.googleusercontent.com/aida/AP1WRLu2qQUzwakp9aoPFaZv-3fPUvSaqWAVmJxXdosrfRNT7tTWyLS7MZMZ75xVexcu9XhFQ9v5m74a5Xtn7yVUIxmcQtq4FYsWKePUFs3YaJt_4fPQxhBI1wOm6BhLT5vAuJuUsxNG5dGNx5uSvc1u1R4E2zVkzMdPlDZEu2gJYpmOsbT1rnFKMWBXwWSNZfEmIY61LoxsuapTHOLRzqtkjaap7_8SNRTXfSS2TUdWSVyAak_a1bKRaGAcuJ8U"/>
+<svg class="w-16 h-16 mx-auto mb-md text-[#FF0000] group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M23.498 6.163c-.272-1.016-1.07-1.815-2.085-2.087-1.837-.495-9.413-.495-9.413-.495s-7.575 0-9.413.495c-1.016.272-1.813 1.071-2.085 2.087-.497 1.837-.497 5.679-.497 5.679s0 3.843.497 5.681c.272 1.015 1.07 1.814 2.085 2.086 1.838.496 9.413.496 9.413.496s7.576 0 9.413-.496c1.015-.272 1.813-1.071 2.085-2.086.497-1.838.497-5.681.497-5.681s0-3.842-.497-5.679zM9.545 15.568V8.113l6.545 3.728-6.545 3.727z"/>
+</svg>
 <p class="font-title-lg text-title-lg group-hover:text-white transition-colors">YouTube</p>
 </div>
 <!-- Twitter/X -->
 <div class="bg-white p-lg rounded-[18px] border border-outline-variant hover:bg-gradient-to-br hover:from-gray-800 hover:to-black group transition-all duration-300 hover:-translate-y-2">
-<img alt="Twitter X" class="w-16 h-16 mx-auto mb-md group-hover:invert transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLsGM9XF8o-NC0JaYTKB0ktGqExRwKK8TX5tCaGtVIjm1QbEIXNHDzfpBRibE1QMn7gJXjpf5kHNG4GewpvZGsi8EINKvZpeR4TyM2ET_IBnMF1zS525wgNbtTRCutiVsgNvplXynMh7pZdbTzgZPN7TdHdKsSpb-2rSFsV938qX2GYbgFIivwrLp5WpfnszMsVGOK5bxeymQczSEifOS9zgQ1s6i1mfmyYEaDcKRWOsOXdi9Q_s-BC6P4Sz"/>
+<svg class="w-16 h-16 mx-auto mb-md text-black group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+</svg>
 <p class="font-title-lg text-title-lg group-hover:text-white transition-colors">Twitter / X</p>
 </div>
 </div>
