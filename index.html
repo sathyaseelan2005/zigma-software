@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zigma Software | Premium Enterprise Solutions</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#404751",
+                "primary-fixed": "#d0e4ff",
+                "on-tertiary-container": "#efedff",
+                "surface-container-high": "#222a3d",
+                "surface": "#0b1326",
+                "surface-container": "#171f33",
+                "on-secondary-fixed-variant": "#930016",
+                "on-error": "#690005",
+                "on-tertiary": "#1b247f",
+                "on-tertiary-fixed-variant": "#343d96",
+                "on-primary-fixed-variant": "#00497b",
+                "surface-variant": "#2d3449",
+                "surface-bright": "#31394d",
+                "secondary-fixed-dim": "#ffb3ae",
+                "on-tertiary-fixed": "#000767",
+                "inverse-primary": "#0062a1",
+                "secondary-fixed": "#ffdad7",
+                "surface-container-lowest": "#060e20",
+                "secondary-container": "#a9011b",
+                "on-surface": "#dae2fd",
+                "tertiary-fixed-dim": "#bdc2ff",
+                "tertiary-fixed": "#e0e0ff",
+                "on-surface-variant": "#c0c7d2",
+                "outline": "#8a919c",
+                "surface-tint": "#9ccaff",
+                "surface-container-highest": "#2d3449",
+                "error": "#ffb4ab",
+                "on-primary-container": "#e6f0ff",
+                "on-error-container": "#ffdad6",
+                "inverse-on-surface": "#283044",
+                "primary": "#005791",
+                "on-primary-fixed": "#001d35",
+                "tertiary": "#bdc2ff",
+                "secondary": "#ffb3ae",
+                "background": "#0b1326",
+                "tertiary-container": "#5b64be",
+                "surface-container-low": "#131b2e",
+                "inverse-surface": "#dae2fd",
+                "on-secondary": "#68000c",
+                "primary-fixed-dim": "#9ccaff",
+                "on-background": "#dae2fd",
+                "on-primary": "#003257",
+                "on-secondary-fixed": "#410005",
+                "primary-container": "#0670b7",
+                "error-container": "#93000a"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "20px",
+                "full": "9999px"
+            },
+            "spacing": {
+                      "base": "8px",
+                      "container-margin-desktop": "40px",
+                      "container-margin-mobile": "16px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "sm": "12px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "xxl": "64px"
+              },
+            "fontFamily": {
+                "label-md": ["Geist"],
+                "label-sm": ["Geist"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "headline-lg": ["Plus Jakarta Sans"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+        .shimmer:hover {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .carousel-track {
+            display: flex;
+            width: calc(250px * 10);
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 5)); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+<a href="index.html" class="flex items-center gap-base cursor-pointer">
+<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+</a>
+<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
+<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<!-- Services Dropdown container -->
+<div class="relative group h-full flex items-center">
+  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+    <span>Services</span>
+    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+  </button>
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+  </div>
+</div>
+<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+</div>
+<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+<button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+<a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="flex flex-col items-center gap-sm">
+  <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+</div>
+<a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+<main>
+<!-- Hero Slider (Conceptual implementation with focus on visual) -->
+<section class="relative h-[751px] w-full overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A sprawling, high-tech command center with large-scale digital displays glowing in a deep blue and dark navy palette. The lighting is low and moody, reflecting off polished surfaces and frosted glass partitions. This professional enterprise environment features soft, cinematic focus on futuristic data visualization charts. The atmosphere is authoritative, sleek, and high-performance, embodying modern corporate digital craftsmanship." src="https://lh3.googleusercontent.com/aida/AP1WRLIqk4luXEWH7QZtl0FnKjF4OFni-6Lnov6xWqHW6vgscMW0NopAR5sAZ633Sr4NUgkSomcf7H4bXviSA_5KRr32ZdW9PJCBihIzZ6OmpZ-zakR-boUUY8g3oXc7lYA5YIXVvGW53YePunFSvaJ7bg0LT2qAexJw5Bo6akLZ6N8POAOCmEqjTSHtpMKhfU9vn_TNr2J58PIgSWsspMNu9ipEi486zx2_86_8MHRW19CNCPYNlNNDXJj7NR-"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto h-full flex items-center px-xl">
+<div class="max-w-2xl space-y-lg">
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">Empowering Enterprise Evolution Through Intelligence.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Advanced HRMS, Business Analytics, and App Development frameworks designed for high-performance C-suite teams.</p>
+<div class="flex gap-md pt-lg">
+<a href="products.html" class="bg-primary-container text-on-primary-container px-xl py-md rounded-xl font-label-md text-label-md flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all">Explore Products <span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="contact.html" class="glass-card px-xl py-md rounded-xl font-label-md text-label-md text-on-surface hover:bg-white/10 transition-all flex items-center">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Welcome Section -->
+<section class="py-xxl px-xl max-w-7xl mx-auto overflow-hidden">
+<div class="grid md:grid-cols-2 gap-xxl items-center">
+<div class="fade-up">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-base block">Welcome to Zigma</span>
+<h2 class="font-headline-lg text-headline-lg mt-sm mb-lg">Precision Engineering for the Global Modern Enterprise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">At Zigma Software, we bridge the gap between luxury digital craftsmanship and functional utility. Our mission is to provide high-level overview data and architectural glass-like UI for the world's most demanding executives.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't just build software; we build the spatial digital infrastructure that scales with your ambition.</p>
+</div>
+<div class="relative group fade-up">
+<div class="absolute -inset-4 bg-primary/10 rounded-xl blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<img class="relative z-10 rounded-xl shadow-2xl transition-transform group-hover:scale-[1.02] duration-500" data-alt="A sophisticated corporate board room with floor-to-ceiling glass windows overlooking a modern city skyline at dusk. The interior is minimal with premium materials like dark wood, leather, and brushed steel. The lighting is warm and directional, highlighting the clean architectural lines. This setting evokes a sense of authority, transparency, and clarity, perfectly matching a professional enterprise brand aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLtEhr6N9BDxgiihYmt5AWOzeoLkGAJdTMAO30vq5ftYyiufFjB0OepLbXf1w3OYmV1sksmCrAQ8JgpWnv9ULlDsL3uOE6zKqDVcW29H9w5_1vqzAhSz36w3SxY5Bv--NI9Subn_YdkMamdTN5L6pOcRTPDPj-NMeJtIWz96cvcVnjQIhEpR9clssnGdHk4vFCzGVFw58VN9nPar3VMNtb-jtETrgKh-gIUtfqyuVdQqKkAyGelA3GRWOJ_E"/>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-xxl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-xl">
+<div class="text-center mb-xxl fade-up">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Integrated Digital Solutions</h2>
+<p class="text-on-surface-variant font-body-md max-w-2xl mx-auto">Luxury performance meets enterprise-grade scalability across our core service pillars.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-lg">
+<!-- Card 1 -->
+<div class="glass-card rounded-xl group hover:-translate-y-2 transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sharp, detailed close-up of a high-performance analytics dashboard showing clean data visualizations, line charts, and bar graphs on a dark glass interface. The primary colors are deep blue and electric blue accents. The lighting is crisp and modern, focusing on the precision of the data points and the sleek digital typography, suggesting clarity through depth and sophisticated insight." src="https://lh3.googleusercontent.com/aida/AP1WRLuJRJkM014c0SZ-m3xCc5MfdLN8-q9WdeiMMYbC-_dQ6Wy5ql8BfrKPmes43KY9BHXGNH2nRgJB_bVvgFHi7JIi2VTU3N6ligJwa2nhJXIKHvwyKuFxutCnlxLCrq2mA0ol8O5iXBQlROqOYA88gCwDQVyEF_lOICeUp86dFvuj_4E5wg3snDLdyd9P_CXXsdGWYoH5DFB5w31knETIN_5t188FM8y7CiJsECGhl62ECOn37EjY8gn63ly6"/>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md mb-sm">Web Development</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-lg">Precision-engineered digital portals and websites leveraging modern high-performance stacks.</p>
+<a href="web-development.html" class="text-primary font-label-md text-label-md flex items-center gap-2 group/btn">Read More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-xl group hover:-translate-y-2 transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A hand holding a high-end mobile smartphone displaying a sophisticated user interface with glassmorphic design elements. The setting is a minimalist, brightly lit studio with soft shadows. The screen shows a clean app layout with blue and white color schemes. The image emphasizes the craftsmanship and tactile premium quality of mobile application development." src="https://lh3.googleusercontent.com/aida/AP1WRLvwOALKx9EidlVd7B0pihCTEkDIofKeu8hUmv7pPv6TYHoRWEf1gL34_datSsaluIO-Uwj0PyyetQmHcw8RAY9RHJTTaa6VBN3olZCqduRw4ADkvDHt_HTSBH5mCfSWVCRF2XwgdE27hSOrb6T0cmhp0U9sWQIBvmiEI9eOtMBYkRYPTJP-TJh3gmRKDcL6k7bHRZZeGaL85WAsHG_gMI-xRsQNXkC2efD2ofBU_pC3US6j79uLCVBeH0uA"/>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md mb-sm">Mobile App Dev</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-lg">Native-tier experiences crafted for iOS and Android ecosystems.</p>
+<a href="mobile-development.html" class="text-primary font-label-md text-label-md flex items-center gap-2 group/btn">Read More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-xl group hover:-translate-y-2 transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional business team collaborating in a modern open-office environment. The scene is bright and airy with high-key lighting. The focus is on a collaborative work session with high-tech screens showing workforce management software. The color palette is composed of neutrals with vibrant red accents, symbolizing high-energy HR operations and professional harmony." src="https://lh3.googleusercontent.com/aida/AP1WRLsssLCpc84zfFwzewyHXX_j19B22j4lG6mtslvwVOt2KAe77cLtHp-oJyhkIMsK2WgH8hLi8ATq2fTlm2BjqbFaJxjx80oaWZbUUmooGO701cVcHT7n5HpLp6IiRrpb-OXqsRCrudA6Yq3tAYRoUuZZTJs-A7gEHoo-1psv-DjMqXqoP9t6AIoKTwm2w9g-CMmr-3M-Qq-Cpqu1AxjHlcWrpLPdrH6vKuxuwDiC-yFiwVCMcPKeu-LeYAXY"/>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md mb-sm">Software Support</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-lg">Seamless deployment, cloud configuration, and multi-tiered support SLAs.</p>
+<a href="software-support.html" class="text-primary font-label-md text-label-md flex items-center gap-2 group/btn">Read More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-card rounded-xl group hover:-translate-y-2 transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-concept digital marketing graphic representing social connectivity and data flows. Translucent nodes and lines of light intersect on a dark, reflective surface. The lighting features soft glows in red and blue. The visual style is abstract yet technological, representing a sophisticated social media marketing strategy built on real-time data and connectivity." src="https://lh3.googleusercontent.com/aida/AP1WRLtktN4dwchmIn8Aj7I_9TxzgLdmLRydgBAQWaGjqh3egleJZ2z4E918MQD77m95R7wK0yELQTZpcssvVGe4CDDxixtzkkk2PKQQtHVRu1iifPh82vMYB45gyrZ0sTavFAOJd2BXJqzvd2WSt0FV8pufr7ZBfYet87j2I8nAAjmf174wFrG2-MHE6jJp2C5AigjhSJNDgdmS0CHOj4Hpg2ZKka565sUvUEHaM-vW8GHkxkRSBP3p1BPtaT3h"/>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md mb-sm">Digital Marketing</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-lg">Hyper-targeted social presence and enterprise SEO to amplify authority.</p>
+<a href="seo-services.html" class="text-primary font-label-md text-label-md flex items-center gap-2 group/btn">Read More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us (Bento Grid) -->
+<section class="py-xxl max-w-7xl mx-auto px-xl">
+<div class="text-center mb-xxl fade-up">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Why Global Leaders Choose Zigma</h2>
+</div>
+<div class="grid md:grid-cols-6 md:grid-rows-2 gap-md h-auto md:h-[600px]">
+<div class="md:col-span-3 glass-card p-lg rounded-xl flex flex-col justify-end group transition-all duration-500 hover:shadow-[0_0_30px_rgba(156,202,255,0.1)]">
+<span class="material-symbols-outlined text-4xl text-primary mb-md">analytics</span>
+<h4 class="font-headline-md text-headline-md mb-sm">Executive Analytics</h4>
+<p class="text-on-surface-variant font-body-md">Precision reporting for stakeholders who demand clarity.</p>
+</div>
+<div class="md:col-span-3 glass-card p-lg rounded-xl flex flex-col justify-end group transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,179,174,0.1)]">
+<span class="material-symbols-outlined text-4xl text-secondary mb-md">webhook</span>
+<h4 class="font-headline-md text-headline-md mb-sm">Scalable Web Dev</h4>
+<p class="text-on-surface-variant font-body-md">Built on modern stacks like React and Node for future-proof growth.</p>
+</div>
+<div class="md:col-span-2 glass-card p-lg rounded-xl flex flex-col justify-end group hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-3xl text-primary mb-sm">search</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Premium SEO</h4>
+<p class="text-on-surface-variant text-sm">Market authority through organic growth.</p>
+</div>
+<div class="md:col-span-2 glass-card p-lg rounded-xl flex flex-col justify-end group hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-3xl text-secondary mb-sm">share</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Elite SMM</h4>
+<p class="text-on-surface-variant text-sm">Targeted impact on your core audience.</p>
+</div>
+<div class="md:col-span-2 glass-card p-lg rounded-xl flex flex-col justify-end group hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-3xl text-primary mb-sm">smartphone</span>
+<h4 class="font-headline-md text-headline-md mb-xs">App Ecosystems</h4>
+<p class="text-on-surface-variant text-sm">Seamless multi-platform experiences.</p>
+</div>
+</div>
+</section>
+<!-- Partner Carousel -->
+<section class="py-xl bg-surface-container overflow-hidden">
+<div class="carousel-track">
+<!-- Logos (Simulated) -->
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">CHANNEL.ONE</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">TECHFLOW</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">NEXUS.CORP</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">GLOBAL.IQ</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">PRIME.SOL</span></div>
+<!-- Duplicate for seamless loop -->
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">CHANNEL.ONE</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">TECHFLOW</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">NEXUS.CORP</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">GLOBAL.IQ</span></div>
+<div class="w-[250px] flex items-center justify-center opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"><span class="font-bold text-headline-md">PRIME.SOL</span></div>
+</div>
+</section>
+<!-- Key Features (Zoom Grid) -->
+<section class="py-xxl px-xl max-w-7xl mx-auto">
+<div class="text-center mb-xxl fade-up">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Architecture of Excellence</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-lg">
+<div class="relative rounded-xl overflow-hidden group h-80">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of a server rack with blinking green and blue LEDs, representing high-tier cybersecurity and technical infrastructure. The shallow depth of field creates a sense of immense complexity and digital depth. The environment is dark and cold, emphasizing the cooling systems and the high-tech, reliable nature of enterprise-grade cloud servers." src="https://lh3.googleusercontent.com/aida/AP1WRLuelgzc_fQjyXuSz6BlMJ8LdoqMRPzrxb8peckz9uBk2zf_LQfxgbC2ijLAUdc2prVXLfXFlpovXj2oBgyNnnO_xfqffuAgIOzEjb85SeAdzCcUcZATM1KF3zNQ_gSRK6pPAD9uxBH6wu69qXbExm5B0VUfXnaGwXZQNktlc2oU_u5YQmt3U29yCxxib1DSYvIdVttWQGwYBzO29S34uVpTP-6AkvVr9XM3iUH1QNdrEElF_ri_mJXzgRM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Secured Core</h4>
+<p class="text-white/70 text-sm">Enterprise-grade security protocols.</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group h-80">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stylized overhead shot of high-tech computer chips and circuit boards glowing with inner electrical energy. The lighting is low-key, with vibrant blue and neon light trails following the physical paths on the hardware. This visual represents technical superiority and the raw power of customized enterprise software engines." src="https://lh3.googleusercontent.com/aida/AP1WRLusX68WMqgyd6CNstY6vtzXUnabHfvx0i0Na5XkYZE7YVF_PMIGFDXh8Sf9jxeODqnHFo-L_mov77UiMGbpLFWPPqASXdZ-JWVLIR-B9YIpCtpI1EZgfMdEY3X7_KG7BR8-XeS4M5O-f069LCn1cRhf7kXusyUXfIxmqk9n7R_RQX2g9b3nkmEkyEj6KKNeylIgeg9RctPhrOmr-KLTTRMCmoMnfNnv12PX-LAPx6Amyu4bPCHqCPfSIE1V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Custom Engines</h4>
+<p class="text-white/70 text-sm">Tailored logic for specific workflows.</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group h-80">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A global digital map representing worldwide connectivity and data distribution. Glowing lines connect major city hubs on a dark, futuristic globe. The lighting is cinematic with a blue atmospheric glow. This imagery symbolizes the global reach and seamless integration of a world-class enterprise solution across multiple continents." src="https://lh3.googleusercontent.com/aida/AP1WRLtDiOT7KDFwV4rgCNQqmkdtLDGv1PJPFhgQcikw4ZqyCWm7lF_5QpbtwOS50IdlmsGvuKExRfC-qLlzj2OiyR2fMiNco5bSWgEVkK6DlU354Q-JxR-3JEado2XXmtml35MlmXETY2bdMu6xOYwXb0dTUWl51zBBqIJ1MIFdNssv8Nv8iWzTZtje9COb5RZp3HuD9W7U57wrcpU8k5IUEyPvj7qV5F5emRVHATfPGMpRpaA3VMqEgKhtDr8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Global Scale</h4>
+<p class="text-white/70 text-sm">Deployable across multiple territories.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-xxl px-xl">
+<div class="max-w-7xl mx-auto rounded-xl bg-gradient-to-r from-primary-container to-surface-container-high overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full hidden md:block opacity-20">
+<span class="material-symbols-outlined text-[300px] absolute -right-10 -top-10 text-white/10 rotate-12">rocket_launch</span>
+</div>
+<div class="p-xxl relative z-10 max-w-2xl">
+<h2 class="font-display-lg text-display-lg text-white mb-lg">Ready to Transform Your Business?</h2>
+<p class="text-white/80 font-body-lg mb-xl">Join hundreds of industry leaders who have achieved clarity through Zigma's advanced digital ecosystems.</p>
+<div class="flex gap-md">
+<a href="contact.html" class="bg-white text-primary-container px-xl py-md rounded-lg font-bold hover:bg-on-primary-container transition-colors flex items-center">Get Started Now</a>
+<a href="contact.html" class="border border-white/30 text-white px-xl py-md rounded-lg font-bold hover:bg-white/10 transition-colors flex items-center">Book a Demo</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-on-primary dark:text-on-surface w-full rounded-t-xl border-t-4 border-primary mt-xxl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl py-xl max-w-7xl mx-auto">
+<div class="space-y-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">terminal</span>
+<span class="font-headline-md text-headline-md font-bold text-on-primary">Zigma Software</span>
+</div>
+<p class="text-surface-variant/80 font-body-md leading-relaxed">Defining the next era of enterprise software with luxury digital craftsmanship and precision engineering.</p>
+<div class="flex gap-md">
+<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">groups</span></a>
+<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-lg">Services</h5>
+<ul class="space-y-sm font-body-md text-surface-variant/80">
+<li><a class="hover:text-white transition-colors" href="web-development.html">Web Design & Development</a></li>
+<li><a class="hover:text-white transition-colors" href="mobile-development.html">Mobile App Development</a></li>
+<li><a class="hover:text-white transition-colors" href="seo-services.html">SEO Services</a></li>
+<li><a class="hover:text-white transition-colors" href="social-marketing.html">Social Media Marketing</a></li>
+<li><a class="hover:text-white transition-colors" href="software-support.html">Software Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-lg">Company</h5>
+<ul class="space-y-sm font-body-md text-surface-variant/80">
+<li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="customer.html">Our Customers</a></li>
+<li><a class="hover:text-white transition-colors" href="testimonials.html">Testimonials</a></li>
+<li><a class="hover:text-white transition-colors" href="blog.html">Blogs</a></li>
+<li><a class="hover:text-white transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-lg">Get In Touch</h5>
+<p class="text-surface-variant/80 text-sm mb-md">Door No: 4/1c,12-A, Annamalai Gounder Layout, Near Hotel Vignesh, Mettur Road, Erode - 638011, Tamil Nadu, India.</p>
+<p class="text-surface-variant/80 text-sm mb-xs">Email: info@zigmasoftware.in</p>
+<p class="text-surface-variant/80 text-sm mb-xs">Phone: +91 99941 40474</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-xl py-lg border-t border-outline-variant/10 text-center text-surface-variant/60 font-label-sm text-label-sm">
+            © 2024 Zigma Software. All rights reserved. Precision Software for the Global Elite.
+        </div>
+</footer>
+<script>
+        // Micro-interactions and simple intersection observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+            
+            // Subtle mouse parallax for hero
+            const hero = document.querySelector('section');
+            if (hero) {
+                hero.addEventListener('mousemove', (e) => {
+                    const { clientX, clientY } = e;
+                    const moveX = (clientX - window.innerWidth / 2) * 0.01;
+                    const moveY = (clientY - window.innerHeight / 2) * 0.01;
+                    const img = hero.querySelector('img');
+                    if(img) img.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+                });
+            }
+        });
+    </script>
+</body></html>

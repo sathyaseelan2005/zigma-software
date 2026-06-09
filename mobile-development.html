@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zigma Software | Premium Mobile App Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c0c7d2",
+                        "surface-container": "#e7eeff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d0e4ff",
+                        "on-error": "#ffffff",
+                        "on-background": "#111c2d",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#db3238",
+                        "on-primary-fixed-variant": "#00497b",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary": "#b71323",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-surface": "#111c2d",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-container": "#e6f0ff",
+                        "surface-container-high": "#dee8ff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#0062a1",
+                        "background": "#f9f9ff",
+                        "inverse-surface": "#263143",
+                        "primary-container": "#0670b7",
+                        "primary": "#005791",
+                        "inverse-primary": "#9ccaff",
+                        "on-primary-fixed": "#001d35",
+                        "outline": "#717882",
+                        "on-surface-variant": "#404751",
+                        "inverse-on-surface": "#ecf1ff",
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#cfdaf2",
+                        "surface-container-highest": "#d8e3fb",
+                        "primary-fixed-dim": "#9ccaff",
+                        "tertiary-container": "#cca72f",
+                        "surface-variant": "#d8e3fb",
+                        "on-secondary-fixed-variant": "#930016",
+                        "tertiary": "#735c00",
+                        "on-secondary-fixed": "#410005",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                      "base": "8px",
+                      "container-margin-desktop": "40px",
+                      "container-margin-mobile": "16px",
+                      "gutter": "16px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "sm": "12px",
+                      "xl": "32px",
+                      "xs": "4px"
+              },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+<a href="index.html" class="flex items-center gap-base cursor-pointer">
+<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+</a>
+<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
+<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<!-- Services Dropdown container -->
+<div class="relative group h-full flex items-center">
+  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+    <span>Services</span>
+    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+  </button>
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+  </div>
+</div>
+<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+</div>
+<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+<button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+<a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="flex flex-col items-center gap-sm">
+  <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+</div>
+<a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] md:h-[700px] overflow-hidden bg-inverse-surface">
+<div class="absolute inset-0">
+<img alt="Future Mobile Tech" class="w-full h-full object-cover opacity-40" data-alt="A futuristic and sleek composition showing multiple semi-transparent smartphones hovering in a dark, atmospheric studio. The lighting is a mix of deep royal blue and neon red accents, highlighting the thin glass edges of the devices. Digital data streams and glowing interface elements float around the phones, creating a high-end SaaS aesthetic that communicates power and precision. The mood is professional and technologically advanced." src="https://lh3.googleusercontent.com/aida/AP1WRLtcLKY7pxBXJDnv15W5gHO4BacYvGtIdUlr-NSosPIsIFR8M0_nFKSH99nOkA6Eosb2ZD0KGBfxhRDOcxV6bs0UZezL__ShWESw2d7VNPfM68av6twCwTQuHZb3u-u5KkAprxdPfvqtYVRUQh0DfRHKqcV7DtuVY0TmdgQeQqAUOmMlodvIncAlvaNNIfHFRvcANBnWvWoUgb9hy3WDg27oAazdZunV32h7jvNUoCjdr_j-FgOY_HkP-U5k"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-inverse-surface/80 via-inverse-surface/40 to-transparent"></div>
+<div class="relative z-10 h-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col justify-center items-start">
+<h1 class="text-white font-display-lg text-display-lg md:text-[64px] leading-tight mb-md animate-fade-in">
+                Mobile App <br/><span class="text-primary-fixed">Development</span>
+</h1>
+<p class="text-surface-variant text-body-lg max-w-2xl mb-xl">
+                Build powerful Android and iOS applications that transform your business operations and elevate user experiences to global standards.
+            </p>
+<div class="flex gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-label-md hover:bg-primary-container transition-all">Start Project</button>
+<button class="border border-white/30 text-white px-xl py-md rounded-xl font-label-md hover:bg-white/10 transition-all">View Portfolio</button>
+</div>
+</div>
+<!-- Wave Divider -->
+<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+<svg class="relative block w-full h-[60px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.83C0,95.83,161,122.52,321.39,56.44Z"></path>
+</svg>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-xl md:py-32 px-container-margin-mobile md:px-container-margin-desktop bg-background">
+<div class="max-w-4xl mx-auto text-center reveal">
+<span class="inline-block px-md py-xs bg-primary-fixed text-on-primary-fixed-variant rounded-full text-label-sm font-label-sm mb-md">PREMIUM SOLUTIONS</span>
+<h2 class="text-headline-lg md:text-display-lg font-headline-lg text-on-surface mb-lg">Transform Your Ideas Into Powerful Mobile Apps</h2>
+<p class="text-on-surface-variant text-body-lg leading-relaxed">
+                At Zigma Software, we don't just build apps; we engineer digital experiences. Our expert team combines strategic thinking with cutting-edge technology to deliver mobile solutions that are scalable, secure, and stunningly designed. From enterprise internal tools to consumer-facing marketplaces, we bring your vision to life on every screen.
+            </p>
+</div>
+</section>
+<!-- Why Choose Us Grid -->
+<section class="py-xl bg-surface-container-low px-container-margin-mobile md:px-container-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg reveal">
+<!-- Card 1 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="developer_mode">developer_mode</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">Custom App Development</h3>
+<p class="text-on-surface-variant">Tailored mobile solutions designed specifically for your unique business requirements and target audience.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="devices">devices</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">Android &amp; iOS Development</h3>
+<p class="text-on-surface-variant">Native performance across all platforms, ensuring a seamless experience for every mobile user.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="palette">palette</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">Modern UI/UX Design</h3>
+<p class="text-on-surface-variant">Exceptional visual interfaces and user journeys that drive engagement and retention.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="security">security</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">High Performance &amp; Security</h3>
+<p class="text-on-surface-variant">Optimized codebases with enterprise-grade security protocols to protect sensitive data.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="account_tree">account_tree</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">Scalable Architecture</h3>
+<p class="text-on-surface-variant">Build apps that grow with you, handling increasing users and complexity effortlessly.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-white p-xl rounded-[20px] border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all group">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-lg group-hover:shadow-[0_0_20px_rgba(0,87,145,0.3)] transition-all">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="text-title-lg font-title-lg mb-sm">Ongoing Support</h3>
+<p class="text-on-surface-variant">Continuous maintenance and updates to keep your application ahead of the competition.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile Services Column Section -->
+<section class="py-xl md:py-32 bg-white px-container-margin-mobile md:px-container-margin-desktop overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-xl">
+<div class="reveal">
+<h2 class="text-headline-lg font-headline-lg mb-lg">Comprehensive Mobile Capabilities</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">Native Android (Kotlin)</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">Native iOS (Swift)</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">Cross-Platform (Flutter)</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">React Native</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">Hybrid App Solutions</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">UI/UX Strategy</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">API Integration</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-medium">QA &amp; Automation Testing</span>
+</div>
+</div>
+<div class="mt-xl">
+<button class="bg-secondary text-white px-xl py-md rounded-xl hover:bg-secondary-container transition-all flex items-center gap-sm">
+                        Get Service Details <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative reveal flex justify-center lg:justify-end">
+<div class="relative w-[300px] md:w-[400px]">
+<img alt="Smartphone Illustration" class="rounded-[40px] shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500" data-alt="A premium 3D render of a high-end smartphone display showcasing a vibrant software dashboard. Floating around the phone are stylized icons for cloud syncing, secure encryption, and fast analytics. The scene is lit by soft studio lights with blue and red rim highlights, set against a clean white and light-blue background. The overall style is clean, corporate SaaS, and highly modern." src="https://lh3.googleusercontent.com/aida/AP1WRLqqYi7DByhmxapbpzNAskUKcYz3dRPBqTrs4ir1eUrT4wTDmgu5MIuYmhDeOwRTzKFHNuUnQx7aJDBs9U9D0WdKU3fFEnCLLcq4YRAY3J3EDJWZlDCNYfJ_ID6z5JAaqG1shPalVPV6Rxgs72WJVifd07-gmKEbiWYY_iYylKlhifCSStpgZADnumyr9jOOVkLjecckIqHVFIY7cF02fl_wd-mq3zcnnATFP6pZYY0DtjLsgsdUjrCu92A"/>
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-tertiary-fixed-dim/20 rounded-full blur-2xl animate-pulse"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-primary-fixed/30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="py-xl md:py-32 bg-surface-container-low px-container-margin-mobile md:px-container-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-xl reveal">
+<h2 class="text-headline-lg font-headline-lg">Our Strategic Roadmap</h2>
+<p class="text-on-surface-variant">A proven development lifecycle that ensures quality at every milestone.</p>
+</div>
+<div class="relative max-w-4xl mx-auto reveal">
+<!-- Vertical Line -->
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-fixed-dim/50 rounded-full"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-xl w-full">
+<div class="md:w-5/12 ml-12 md:ml-0 md:text-right">
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+<h4 class="font-bold text-primary mb-xs">Requirement Analysis</h4>
+<p class="text-on-surface-variant text-label-md">Deep dive into your business goals, user personas, and technical constraints.</p>
+</div>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white flex items-center justify-center z-20">
+<span class="text-white text-[10px]">01</span>
+</div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-xl w-full">
+<div class="md:w-5/12"></div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white flex items-center justify-center z-20">
+<span class="text-white text-[10px]">02</span>
+</div>
+<div class="md:w-5/12 ml-12 md:ml-0">
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+<h4 class="font-bold text-primary mb-xs">Strategy &amp; Design</h4>
+<p class="text-on-surface-variant text-label-md">Creating wireframes, interactive prototypes, and architectural blueprints.</p>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-xl w-full">
+<div class="md:w-5/12 ml-12 md:ml-0 md:text-right">
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+<h4 class="font-bold text-primary mb-xs">Development</h4>
+<p class="text-on-surface-variant text-label-md">Agile coding using modern stacks like Flutter, Swift, and Kotlin.</p>
+</div>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white flex items-center justify-center z-20">
+<span class="text-white text-[10px]">03</span>
+</div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+<div class="md:w-5/12"></div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white flex items-center justify-center z-20">
+<span class="text-white text-[10px]">04</span>
+</div>
+<div class="md:w-5/12 ml-12 md:ml-0">
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+<h4 class="font-bold text-primary mb-xs">Deployment &amp; Support</h4>
+<p class="text-on-surface-variant text-label-md">Launching to App Stores and providing ongoing maintenance.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-xl md:py-32 bg-background px-container-margin-mobile md:px-container-margin-desktop">
+<div class="max-w-3xl mx-auto reveal">
+<h2 class="text-headline-lg font-headline-lg text-center mb-xl">Frequently Asked Questions</h2>
+<div class="space-y-md">
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-left hover:bg-surface-container-low transition-all" onclick="toggleFaq(0)">
+<span class="font-bold text-on-surface">How long does it take to develop a mobile app?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="faq-icon-0">add_circle</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300" id="faq-content-0">
+<div class="p-lg pt-0 text-on-surface-variant">Typical timelines range from 3 to 6 months depending on complexity, feature set, and platform requirements.</div>
+</div>
+</div>
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-left hover:bg-surface-container-low transition-all" onclick="toggleFaq(1)">
+<span class="font-bold text-on-surface">Do you build for both Android and iOS?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="faq-icon-1">add_circle</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300" id="faq-content-1">
+<div class="p-lg pt-0 text-on-surface-variant">Yes, we specialize in both native development (Swift/Kotlin) and cross-platform solutions (Flutter/React Native) to provide maximum market reach.</div>
+</div>
+</div>
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-left hover:bg-surface-container-low transition-all" onclick="toggleFaq(2)">
+<span class="font-bold text-on-surface">How do you handle application security?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="faq-icon-2">add_circle</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300" id="faq-content-2">
+<div class="p-lg pt-0 text-on-surface-variant">Security is baked into our process with data encryption, secure API protocols, and regular penetration testing.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#001D35] text-white py-xl md:py-32 px-container-margin-mobile md:px-container-margin-desktop">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
+<!-- Col 1 -->
+<div>
+<div class="flex items-center gap-xs mb-lg">
+<span class="material-symbols-outlined text-primary-fixed text-headline-md" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-headline-md font-bold text-surface-bright">Zigma Software</span>
+</div>
+<p class="text-surface-variant opacity-80 mb-lg">
+                    Premium mobile application development for the enterprise era. We transform complexity into simplicity.
+                </p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+</div>
+</div>
+<!-- Col 2 -->
+<div>
+<h4 class="text-title-lg font-bold mb-lg">Services</h4>
+<ul class="space-y-sm text-surface-variant">
+<li><a class="hover:text-primary-fixed transition-colors" href="web-development.html">Web Development</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="mobile-development.html">Mobile Apps</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="seo-services.html">SEO Services</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="social-marketing.html">Social Marketing</a></li>
+</ul>
+</div>
+<!-- Col 3 -->
+<div>
+<h4 class="text-title-lg font-bold mb-lg">Company</h4>
+<ul class="space-y-sm text-surface-variant">
+<li><a class="hover:text-primary-fixed transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="customer.html">Portfolio</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="testimonials.html">Testimonials</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<!-- Col 4 -->
+<div>
+<h4 class="text-title-lg font-bold mb-lg">Contact</h4>
+<p class="text-surface-variant mb-sm">Door No: 4/1c,12-A, Annamalai Gounder Layout, Erode, Tamil Nadu, India.</p>
+<p class="text-surface-variant mb-sm">info@zigmasoftware.in</p>
+<p class="text-surface-variant">+91 99941 40474</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-32 border-t border-white/10 pt-lg text-center">
+<div class="bg-gradient-to-r from-primary to-secondary h-1 w-full mb-lg rounded-full"></div>
+<p class="text-label-sm text-surface-variant opacity-60">© 2024 Zigma Software. Premium App Development. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+        });
+
+        // Scroll Reveal Animation
+        const reveals = document.querySelectorAll('.reveal');
+        function reveal() {
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', reveal);
+        reveal(); // Initial check
+
+        // FAQ Toggle Logic
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+                icon.innerText = 'add_circle';
+            } else {
+                // Close others if open (optional)
+                document.querySelectorAll('[id^="faq-content-"]').forEach(c => c.style.maxHeight = null);
+                document.querySelectorAll('[id^="faq-icon-"]').forEach(i => {
+                    i.style.transform = 'rotate(0deg)';
+                    i.innerText = 'add_circle';
+                });
+
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(45deg)';
+                icon.innerText = 'cancel';
+            }
+        }
+    </script>
+</body></html>

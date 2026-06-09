@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products Catalog | Zigma Software</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#ecf1ff",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface-container-low": "#f0f3ff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "secondary": "#b71323",
+                    "on-tertiary-container": "#4e3d00",
+                    "inverse-primary": "#9ccaff",
+                    "primary-fixed-dim": "#9ccaff",
+                    "on-secondary-fixed-variant": "#930016",
+                    "on-surface": "#111c2d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffe088",
+                    "outline-variant": "#c0c7d2",
+                    "surface": "#f9f9ff",
+                    "on-primary-fixed": "#001d35",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#e6f0ff",
+                    "secondary-container": "#db3238",
+                    "on-primary-fixed-variant": "#00497b",
+                    "on-tertiary-fixed": "#241a00",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "primary-fixed": "#d0e4ff",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d8e3fb",
+                    "surface-dim": "#cfdaf2",
+                    "tertiary": "#735c00",
+                    "primary": "#005791",
+                    "on-background": "#111c2d",
+                    "background": "#f9f9ff",
+                    "outline": "#717882",
+                    "on-secondary-fixed": "#410005",
+                    "primary-container": "#0670b7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-high": "#dee8ff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#263143",
+                    "surface-tint": "#0062a1",
+                    "surface-variant": "#d8e3fb",
+                    "on-surface-variant": "#404751",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffdad7",
+                    "tertiary-container": "#cca72f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "20px",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                      "base": "8px",
+                      "container-margin-desktop": "40px",
+                      "container-margin-mobile": "16px",
+                      "gutter": "16px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "sm": "12px",
+                      "xl": "32px",
+                      "xs": "4px"
+              },
+            "fontFamily": {
+                    "title-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #001d35 0%, #00497b 100%);
+        }
+        .primary-gradient-btn {
+            background: linear-gradient(90deg, #0670b7 0%, #b71323 100%);
+        }
+        .wave-divider {
+            aspect-ratio: 900/100;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 900 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 C 150 100 300 0 450 50 C 600 100 750 0 900 50 L 900 100 L 0 100 Z' fill='%23f9f9ff'/%3E%3C/svg%3E");
+        }
+        .scrolled-nav {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/20">
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+<a href="index.html" class="flex items-center gap-base cursor-pointer">
+<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+</a>
+<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
+<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<!-- Services Dropdown container -->
+<div class="relative group h-full flex items-center">
+  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+    <span>Services</span>
+    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+  </button>
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+  </div>
+</div>
+<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+</div>
+<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+<button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+<a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="flex flex-col items-center gap-sm">
+  <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+</div>
+<a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient relative overflow-hidden pt-xl pb-0">
+<div class="px-container-margin-mobile text-center relative z-10">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-md">Our Products</h1>
+<p class="text-primary-fixed font-body-md opacity-90 max-w-[280px] mx-auto mb-xl">
+                    Empowering enterprises with next-generation ERP and automation solutions.
+                </p>
+<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10 max-w-4xl mx-auto">
+<img alt="Dashboard Illustration" class="w-full h-full object-cover" data-alt="A high-fidelity 3D visualization of a modern ERP software dashboard displayed on a sleek glass tablet. The interface features vibrant blue and deep red data visualizations, glowing line charts, and professional UI elements. The background is a dark, tech-oriented office setting with soft blue ambient lighting. The aesthetic is clean, corporate, and premium, emphasizing data precision and technological advancement." src="https://lh3.googleusercontent.com/aida/AP1WRLuDXs-6cAPknlX87dykCiUrv4qCNn7HGM5XBKAaFKNVxLW9c2njXGPtzntmyP0x7NCTboPCIbe9-WBgWKWqB5sUodNiEwfK2eUGhW4S1sVGhZ7V_4C9SB9zv91VEOJKkDv4eJA9T7C9k2vjEi20H155ASjFhegbiyrz2fs6V6z0QHYn9cFM_JwjDOoQmk0ixsfgbqHPU9LZdG3-pewG7boGAD4nBBrC8NW6qRdluAqbHxw9g6F9UkRHrYBh"/>
+</div>
+</div>
+<div class="wave-divider h-20 -mt-10 relative z-20"></div>
+</section>
+<!-- Intro Description -->
+<section class="px-container-margin-mobile py-xl bg-surface">
+<div class="text-center max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Complete Business Management Solutions</h2>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                    Zigma Software provides a comprehensive suite of tools designed to streamline your operations, from accounting and inventory to manufacturing and client management. Our solutions are built to scale with your business needs.
+                </p>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-container-margin-mobile py-xl space-y-lg max-w-7xl mx-auto md:px-container-margin-desktop">
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-title-lg text-title-lg text-on-surface">Featured Packages</h3>
+<a href="#all-products" class="text-primary font-label-md">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- FA Card -->
+<div class="bg-surface-container-lowest rounded-lg border-t-4 border-primary p-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-md mb-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+</div>
+<h4 class="font-title-lg text-title-lg">FA - Basic Account</h4>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">Streamlined financial accounting for small to medium enterprises with real-time reporting.</p>
+<div class="flex gap-sm">
+<a href="contact.html" class="flex-1 py-sm bg-primary text-white rounded-lg font-label-md text-center">Learn More</a>
+<a href="contact.html" class="flex-1 py-sm border border-outline-variant text-primary rounded-lg font-label-md text-center">Request Demo</a>
+</div>
+</div>
+<!-- Bills Card -->
+<div class="bg-surface-container-lowest rounded-lg border-t-4 border-secondary p-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-md mb-md">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">receipt_long</span>
+</div>
+<h4 class="font-title-lg text-title-lg">Bills - Basic Billing</h4>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">Automate your invoicing process and manage receivables with unprecedented ease.</p>
+<div class="flex gap-sm">
+<a href="contact.html" class="flex-1 py-sm bg-primary text-white rounded-lg font-label-md text-center">Learn More</a>
+<a href="contact.html" class="flex-1 py-sm border border-outline-variant text-primary rounded-lg font-label-md text-center">Request Demo</a>
+</div>
+</div>
+<!-- Stores Card -->
+<div class="bg-surface-container-lowest rounded-lg border-t-4 border-tertiary p-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-md mb-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">inventory_2</span>
+</div>
+<h4 class="font-title-lg text-title-lg">Stores Management</h4>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">Complete control over your inventory, stock levels, and warehouse operations.</p>
+<div class="flex gap-sm">
+<a href="contact.html" class="flex-1 py-sm bg-primary text-white rounded-lg font-label-md text-center">Learn More</a>
+<a href="contact.html" class="flex-1 py-sm border border-outline-variant text-primary rounded-lg font-label-md text-center">Request Demo</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Request Quotation Sticky Glass Card -->
+<section class="px-container-margin-mobile py-xl max-w-xl mx-auto">
+<div class="glass-card rounded-xl overflow-hidden shadow-xl border border-outline-variant">
+<div class="bg-gradient-to-r from-primary to-primary-container p-md text-white">
+<h3 class="font-title-lg text-title-lg">Quick Quotation</h3>
+<p class="text-[12px] opacity-80 font-label-sm text-label-sm">Get a custom quote for your business needs</p>
+</div>
+<form action="contact.html" method="get" class="p-lg space-y-md">
+<div>
+<label class="block font-label-md text-on-surface mb-xs font-bold text-[14px]">Business Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-primary text-body-md">
+<option>Manufacturing</option>
+<option>Retail</option>
+<option>Service Provider</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-xs font-bold text-[14px]">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-md focus:ring-2 focus:ring-primary text-body-md" placeholder="John Doe" type="text" required/>
+</div>
+<button type="submit" class="w-full primary-gradient-btn text-white font-label-md py-md rounded-lg shadow-lg active:scale-95 transition-all font-bold">
+                        Submit Request
+                    </button>
+</form>
+</div>
+</section>
+<!-- Product Grid with Expandable Details -->
+<section id="all-products" class="px-container-margin-mobile py-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto md:px-container-margin-desktop">
+<div class="text-center mb-xl">
+<h3 class="font-headline-md text-headline-md">All Product Tiers</h3>
+<p class="text-on-surface-variant font-body-md">Scalable solutions for every stage of growth</p>
+</div>
+<div class="grid grid-cols-1 gap-md max-w-4xl mx-auto">
+<!-- Grid Item Template (Repeated for Products) -->
+<script>
+                    const products = [
+                        { name: "Zigfas STD", icon: "shield", desc: "Standard accounting & inventory" },
+                        { name: "Zigfas Professional", icon: "verified", desc: "Advanced tools for pros" },
+                        { name: "Zigfas Enterprise", icon: "corporate_fare", desc: "Full-scale corporate ERP" },
+                        { name: "Zigpams", icon: "apartment", desc: "Property & asset management" },
+                        { name: "HPLMS", icon: "medical_services", desc: "Hospitality & leisure management" },
+                        { name: "MSS", icon: "manufacturing", desc: "Manufacturing support system" },
+                        { name: "SFRMS", icon: "agriculture", desc: "Farm & ranch management" },
+                        { name: "SMSPRO", icon: "sms", desc: "Enterprise SMS gateway" },
+                        { name: "Textile Show Rooms", icon: "storefront", desc: "Retail textile POS" },
+                        { name: "Sticker Pro", icon: "label", desc: "Custom labeling & barcoding" }
+                    ];
+
+                    document.write(products.map(p => `
+                        <details class="group bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden">
+                            <summary class="list-none cursor-pointer p-md flex items-center justify-between">
+                                <div class="flex items-center gap-md">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-[20px]">${p.icon}</span>
+                                    </div>
+                                    <span class="font-title-lg text-on-surface text-[16px]">${p.name}</span>
+                                </div>
+                                <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <div class="px-md pb-md pt-0 border-t border-outline-variant/50">
+                                <div class="py-md">
+                                    <h5 class="font-label-md text-primary mb-xs font-bold text-[14px]">Overview</h5>
+                                    <p class="font-body-md text-on-surface-variant text-[14px]">${p.desc}</p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-sm mb-md">
+                                    <div class="bg-surface-container p-sm rounded-lg">
+                                        <span class="text-[12px] font-label-md text-primary font-bold">Modules</span>
+                                        <p class="text-[13px] font-body-md text-on-surface">12+ Integrated</p>
+                                    </div>
+                                    <div class="bg-surface-container p-sm rounded-lg">
+                                        <span class="text-[12px] font-label-md text-primary font-bold">Users</span>
+                                        <p class="text-[13px] font-body-md text-on-surface">Unlimited Scalability</p>
+                                    </div>
+                                </div>
+                                <a href="contact.html" class="w-full py-sm bg-primary-container/20 text-primary font-label-md rounded-lg block text-center font-bold">Product Details</a>
+                            </div>
+                        </details>
+                    `).join(''));
+                </script>
+</div>
+</div>
+</section>
+<!-- Industry Solutions -->
+<section class="px-container-margin-mobile py-xl max-w-7xl mx-auto md:px-container-margin-desktop">
+<h3 class="font-headline-md text-headline-md text-center mb-xl">Industry Solutions</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="flex flex-col items-center p-lg bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[40px] mb-sm">account_balance</span>
+<span class="font-label-md font-bold text-[14px]">Accounting</span>
+</div>
+<div class="flex flex-col items-center p-lg bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[40px] mb-sm">precision_manufacturing</span>
+<span class="font-label-md font-bold text-[14px]">Textile</span>
+</div>
+<div class="flex flex-col items-center p-lg bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[40px] mb-sm">inventory</span>
+<span class="font-label-md font-bold text-[14px]">Distribution</span>
+</div>
+<div class="flex flex-col items-center p-lg bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[40px] mb-sm">shopping_cart</span>
+<span class="font-label-md font-bold text-[14px]">Retail</span>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="px-container-margin-mobile py-xl bg-inverse-surface text-surface-bright">
+<div class="max-w-7xl mx-auto md:px-container-margin-desktop">
+<h3 class="font-headline-md text-headline-md text-center mb-xl text-white">Why Choose Zigma?</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="flex gap-md items-start">
+<span class="material-symbols-outlined text-primary-fixed text-[32px] shrink-0 mt-1">history</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-white mb-xs">Trusted Since 1991</h4>
+<p class="text-outline-variant font-body-md text-[14px]">Over three decades of experience in enterprise software excellence.</p>
+</div>
+</div>
+<div class="flex gap-md items-start">
+<span class="material-symbols-outlined text-primary-fixed text-[32px] shrink-0 mt-1">groups</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-white mb-xs">900+ Active Clients</h4>
+<p class="text-outline-variant font-body-md text-[14px]">Powering businesses across diverse sectors and geographies.</p>
+</div>
+</div>
+<div class="flex gap-md items-start">
+<span class="material-symbols-outlined text-primary-fixed text-[32px] shrink-0 mt-1">support_agent</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-white mb-xs">24/7 Premium Support</h4>
+<p class="text-outline-variant font-body-md text-[14px]">Dedicated experts always available to assist your operations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-container-margin-mobile py-xl max-w-7xl mx-auto md:px-container-margin-desktop">
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-xl p-xl text-center text-white relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-[48px] mb-md" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<h3 class="font-headline-md text-headline-md mb-md">Need a Custom Business Solution?</h3>
+<p class="font-body-md mb-xl opacity-90">Let our experts design a platform specifically tailored to your unique workflow.</p>
+<a href="contact.html" class="bg-surface-bright text-primary px-xl py-md rounded-lg font-title-lg shadow-xl active:scale-95 transition-all inline-block font-bold">
+                        Talk to an Expert
+                    </a>
+</div>
+<!-- Abstract Pattern Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<circle cx="10" cy="10" fill="white" r="20"></circle>
+<circle cx="90" cy="90" fill="white" r="30"></circle>
+<circle cx="50" cy="50" fill="white" r="10"></circle>
+</svg>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="px-container-margin-mobile py-xl mb-xl max-w-3xl mx-auto">
+<h3 class="font-headline-md text-headline-md text-center mb-xl text-on-surface">Frequently Asked Questions</h3>
+<div class="space-y-md">
+<details class="group bg-surface rounded-lg border border-outline-variant/30">
+<summary class="list-none cursor-pointer flex justify-between items-center font-label-md p-md font-bold text-[14px]">
+                        What support do you offer after purchase?
+                        <span class="material-symbols-outlined text-primary group-open:rotate-45 transition-transform">add</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md text-[14px] border-t border-outline-variant/10 mt-xs">
+                        We provide 24/7 technical support, on-site training for your staff, and regular software updates to keep your system ahead of the curve.
+                    </div>
+</details>
+<details class="group bg-surface rounded-lg border border-outline-variant/30">
+<summary class="list-none cursor-pointer flex justify-between items-center font-label-md p-md font-bold text-[14px]">
+                        Can the software be customized?
+                        <span class="material-symbols-outlined text-primary group-open:rotate-45 transition-transform">add</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md text-[14px] border-t border-outline-variant/10 mt-xs">
+                        Yes, all our enterprise modules are highly modular and can be customized to fit your specific business processes and reporting requirements.
+                    </div>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-white pt-xl">
+<div class="max-w-[1280px] mx-auto px-container-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+<div>
+<div class="flex items-center gap-base mb-lg">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md tracking-tight text-white">Zigma Software</span>
+</div>
+<p class="text-outline-variant mb-lg leading-relaxed text-sm">Precision in performance. We build the digital future for ambitious enterprises worldwide.</p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block text-white">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
+</h4>
+<ul class="space-y-sm text-outline-variant text-sm">
+<li><a class="hover:text-white transition-colors" href="web-development.html">Web Design & Development</a></li>
+<li><a class="hover:text-white transition-colors" href="mobile-development.html">Mobile App Development</a></li>
+<li><a class="hover:text-white transition-colors" href="seo-services.html">SEO Services</a></li>
+<li><a class="hover:text-white transition-colors" href="social-marketing.html">Social Media Marketing</a></li>
+<li><a class="hover:text-white transition-colors" href="software-support.html">Software Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block text-white">
+                    Company
+                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
+</h4>
+<ul class="space-y-sm text-outline-variant text-sm">
+<li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="customer.html">Our Customers</a></li>
+<li><a class="hover:text-white transition-colors" href="testimonials.html">Testimonials</a></li>
+<li><a class="hover:text-white transition-colors" href="blog.html">Blogs</a></li>
+<li><a class="hover:text-white transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block text-white">
+                    Get In Touch
+                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
+</h4>
+<p class="text-outline-variant mb-md leading-relaxed text-sm">Door No: 4/1c,12-A, Annamalai Gounder Layout, Near Hotel Vignesh, Mettur Road, Erode - 638011, Tamil Nadu, India.</p>
+<p class="text-outline-variant mb-xs leading-relaxed text-sm">Email: info@zigmasoftware.in</p>
+<p class="text-outline-variant mb-xs leading-relaxed text-sm">Phone: +91 99941 40474</p>
+</div>
+</div>
+<div class="relative pt-lg pb-md border-t border-white/10">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-secondary"></div>
+<div class="max-w-[1280px] mx-auto px-container-margin-desktop text-center text-outline-variant text-[14px]">
+                © 2024 Zigma Software. Precision in Performance. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+        });
+
+        // Smooth scroll effect for nav
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 42) {
+                nav.classList.add('scrolled-nav');
+            } else {
+                nav.classList.remove('scrolled-nav');
+            }
+        });
+
+        // Simple Fade-up observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

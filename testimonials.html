@@ -1,0 +1,464 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Testimonials | Zigma Software</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        .wave-divider .shape-fill {
+            fill: #f9f9ff; /* background color */
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001d35",
+                        "primary-fixed": "#d0e4ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary": "#735c00",
+                        "surface-container-highest": "#d8e3fb",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#cfdaf2",
+                        "outline-variant": "#c0c7d2",
+                        "on-secondary-fixed": "#410005",
+                        "inverse-surface": "#263143",
+                        "secondary-container": "#db3238",
+                        "on-background": "#111c2d",
+                        "on-surface-variant": "#404751",
+                        "surface-container-high": "#dee8ff",
+                        "secondary": "#b71323",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#e6f0ff",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "surface-variant": "#d8e3fb",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-surface": "#111c2d",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#0062a1",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-fixed-variant": "#00497b",
+                        "primary-fixed-dim": "#9ccaff",
+                        "primary-container": "#0670b7",
+                        "outline": "#717882",
+                        "primary": "#005791",
+                        "tertiary-container": "#cca72f",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#9ccaff",
+                        "surface": "#f9f9ff",
+                        "on-secondary-fixed-variant": "#930016",
+                        "on-secondary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem",
+                        "card": "20px"
+                    },
+                    "spacing": {
+                      "base": "8px",
+                      "container-margin-desktop": "40px",
+                      "container-margin-mobile": "16px",
+                      "gutter": "16px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "sm": "12px",
+                      "xl": "32px",
+                      "xs": "4px"
+              },
+                    "fontFamily": {
+                        "headline-md": ["Poppins", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "title-lg": ["Poppins", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Poppins", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "display-lg": ["Poppins", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- 1. Top Contact Bar -->
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+<a href="index.html" class="flex items-center gap-base cursor-pointer">
+<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+</a>
+<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
+<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<!-- Services Dropdown container -->
+<div class="relative group h-full flex items-center">
+  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+    <span>Services</span>
+    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+  </button>
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+  </div>
+</div>
+<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+</div>
+<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+<button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+<a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="flex flex-col items-center gap-sm">
+  <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+</div>
+<a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+<!-- 3. Hero Banner -->
+<section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A sophisticated modern office interior with glass walls and professional software developers collaborating in the background. The scene is bathed in a cool, tech-focused blue gradient overlay, emphasizing a high-performance corporate atmosphere with subtle depth and cinematic lighting." src="https://lh3.googleusercontent.com/aida/AP1WRLv7aVOFQpD1YCVXxmpEM2EdCa5dAmMMUTXZPcIhTvu-vs2SBIcXrlUFdeK6a2eUvKm05XWxUzKGH59fWfHp_i_Vj7gtICWpcooXVEhI8pBab2sPWgyUVszp9uvkdNjRnArd5jDpAOsnz0nZJ1PprWd8RrvIGQnMDbyZLsPK03hSDDPjzaLA1MySMFt7SNsFli1bFhWxaae1yi_u78jkaWXrVDMbsdxP6HUxsMAmQExJ3rIlqmwkHLXIBr8z">
+<div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
+</div>
+<div class="relative z-10 text-white">
+<h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Testimonials</h1>
+<p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Testimonials</p>
+</div>
+<!-- Modern Wave Divider -->
+<div class="wave-divider">
+<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
+</div>
+</section>
+<!-- 4. Testimonials Section -->
+<section class="py-xl bg-[#F8FAFC]">
+<div class="max-w-7xl mx-auto px-container-margin-desktop">
+<div class="text-center mb-xl fade-up visible">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs" style="font-family: Poppins, sans-serif;">CLIENT TESTIMONIALS</h2>
+<div class="w-20 h-1 bg-secondary mx-auto mb-md"></div>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">See what our clients say about working with Zigma Software.</p>
+</div>
+<!-- Bento-style Asymmetric Grid for Testimonials -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1: Red Accent -->
+<div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
+<div>
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
+</div>
+<p class="text-on-surface-variant italic mb-xl relative z-10">
+                            "Zigma Software transformed our legacy systems into a streamlined cloud infrastructure. Their attention to detail and proactive communication made the entire transition seamless."
+                        </p>
+</div>
+<div class="flex items-center gap-md">
+
+<div>
+<h4 class="font-headline-md text-title-lg text-primary" style="font-family: Poppins, sans-serif;">David Chen</h4>
+<p class="text-[11px] font-bold text-outline tracking-wider uppercase">CTO, NexGen Dynamics</p>
+</div>
+</div>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-surface-container-highest text-[80px] opacity-20 pointer-events-none" data-icon="format_quote">format_quote</span>
+</div>
+<!-- Card 2: Blue Accent -->
+<div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-primary" data-icon="format_quote" data-weight="fill">format_quote</span>
+</div>
+<p class="text-on-surface-variant italic mb-xl relative z-10">
+                            "The team at Zigma provided not just code, but genuine strategic insight. Their UI/UX redesign increased our user engagement metrics by over 45% in the first quarter alone."
+                        </p>
+</div>
+
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-surface-container-highest text-[80px] opacity-20 pointer-events-none" data-icon="format_quote">format_quote</span>
+</div>
+<!-- Card 3: Red Accent -->
+<div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
+<div>
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
+</div>
+<p class="text-on-surface-variant italic mb-xl relative z-10">
+                            "Working with Zigma Software has been a game-changer for our fintech startup. Their security protocols and robust architecture gave us the confidence to scale globally."
+                        </p>
+</div>
+<div class="flex items-center gap-md">
+
+<div>
+<h4 class="font-headline-md text-title-lg text-primary" style="font-family: Poppins, sans-serif;">Michael Vora</h4>
+<p class="text-[11px] font-bold text-outline tracking-wider uppercase">Founder, SecureWallet</p>
+</div>
+</div>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-surface-container-highest text-[80px] opacity-20 pointer-events-none" data-icon="format_quote">format_quote</span>
+</div>
+<!-- Card 4: Blue Accent (Spans 2 on MD) -->
+<div class="fade-up md:col-span-2 bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col md:flex-row gap-lg justify-between items-center overflow-hidden visible">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
+<div class="flex-1">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="format_quote" data-weight="fill">format_quote</span>
+</div>
+<p class="text-on-surface-variant italic text-lg leading-relaxed relative z-10">
+                            "The technical depth at Zigma is unmatched. They didn't just build an app; they built a scalable ecosystem that handles millions of transactions daily without a single millisecond of downtime. Their commitment to excellence is what defines them."
+                        </p>
+</div>
+<div class="flex flex-col items-center text-center min-w-[180px]">
+
+<h4 class="font-headline-md text-headline-md text-primary" style="font-family: Poppins, sans-serif;">Elena Rodriguez</h4>
+<p class="text-[11px] font-bold text-outline tracking-wider uppercase">VP of Engineering, Global Reach</p>
+</div>
+<span class="material-symbols-outlined absolute top-4 right-4 text-surface-container-highest text-[120px] opacity-10 pointer-events-none" data-icon="format_quote">format_quote</span>
+</div>
+<!-- Card 5: Red Accent -->
+<div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
+<div>
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
+</div>
+<p class="text-on-surface-variant italic mb-xl relative z-10">
+                            "Exceptional project management and world-class engineering. They delivered our AI-driven analytics portal two weeks ahead of schedule."
+                        </p>
+</div>
+<div class="flex items-center gap-md">
+
+<div>
+<h4 class="font-headline-md text-title-lg text-primary" style="font-family: Poppins, sans-serif;">James Wilson</h4>
+<p class="text-[11px] font-bold text-outline tracking-wider uppercase">Head of AI, CloudScale</p>
+</div>
+</div>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-surface-container-highest text-[80px] opacity-20 pointer-events-none" data-icon="format_quote">format_quote</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Footer -->
+<footer class="bg-on-primary-fixed text-white pt-xl">
+<div class="max-w-7xl mx-auto px-container-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-xl pb-xl">
+<!-- Company -->
+<div>
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-[28px] text-primary-fixed" data-icon="terminal">terminal</span>
+<span class="font-title-lg text-title-lg font-bold text-primary-fixed">Zigma Software</span>
+</div>
+<p class="text-primary-fixed/70 text-body-md mb-lg">
+                    Leading the way in digital transformation and innovative software solutions tailored for the modern enterprise.
+                </p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="diversity_3">diversity_3</span>
+</a>
+</div>
+</div>
+<!-- Services -->
+<div>
+<h4 class="font-title-lg text-white mb-sm relative inline-block">
+                    Services
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-secondary"></span>
+</h4>
+<ul class="mt-lg space-y-md">
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="#">Cloud Computing</a></li>
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="#">Custom Software</a></li>
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="#">Mobile App Development</a></li>
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="#">UI/UX Strategy</a></li>
+</ul>
+</div>
+<!-- Links -->
+<div>
+<h4 class="font-title-lg text-white mb-sm relative inline-block">
+                    Quick Links
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-secondary"></span>
+</h4>
+<ul class="mt-lg space-y-md">
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="about.html">About Us</a></li>
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="customer.html">Portfolio</a></li>
+<li class=""><a class="text-secondary font-bold" href="testimonials.html">Testimonials</a></li>
+<li class=""><a class="text-primary-fixed/80 hover:text-secondary transition-all hover:translate-x-1 inline-block" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="font-title-lg text-white mb-sm relative inline-block">
+                    Get in Touch
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-secondary"></span>
+</h4>
+<ul class="mt-lg space-y-md">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="location_on">location_on</span>
+<span class="text-primary-fixed/80 text-label-md">Door No: 4/1c,12-A, Annamalai Gounder Layout, Erode, Tamil Nadu, India.</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="call">call</span>
+<span class="text-primary-fixed/80 text-label-md">+91 99941 40474</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="mail">mail</span>
+<span class="text-primary-fixed/80 text-label-md">info@zigmasoftware.in</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- 8. Copyright Bar -->
+<div class="border-t-[1px] border-primary/20 bg-[#001d35] py-lg relative">
+<!-- Thin gradient line -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-secondary"></div>
+<div class="max-w-7xl mx-auto px-container-margin-desktop flex flex-col md:flex-row justify-between items-center text-label-sm text-primary-fixed/60">
+<p class="">© 2024 Zigma Software. All rights reserved.</p>
+<div class="flex gap-lg mt-md md:mt-0">
+<a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+        });
+
+        // Simple Intersection Observer for Fade-up animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+
+
+</body></html>

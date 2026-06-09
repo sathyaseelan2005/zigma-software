@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blogs | Zigma Software</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed-variant": "#930016",
+                    "on-primary-container": "#e6f0ff",
+                    "primary-fixed": "#d0e4ff",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#db3238",
+                    "background": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001d35",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#0062a1",
+                    "secondary": "#b71323",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-tertiary-container": "#4e3d00",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#735c00",
+                    "tertiary-container": "#cca72f",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#0670b7",
+                    "on-surface-variant": "#404751",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#410005",
+                    "inverse-surface": "#213145",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#9ccaff",
+                    "outline": "#717882",
+                    "surface-container-high": "#dce9ff",
+                    "on-background": "#0b1c30",
+                    "primary": "#005791",
+                    "surface-dim": "#cbdbf5",
+                    "secondary-fixed": "#ffdad7",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface": "#f8f9ff",
+                    "primary-fixed-dim": "#9ccaff",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "surface-container": "#e5eeff",
+                    "outline-variant": "#c0c7d2",
+                    "tertiary-fixed": "#ffe088",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-primary-fixed-variant": "#00497b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                      "base": "8px",
+                      "card-padding": "32px",
+                      "container-margin-desktop": "40px",
+                      "container-margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "lg": "24px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "sm": "12px",
+                      "xl": "32px",
+                      "xs": "4px"
+              },
+            "fontFamily": {
+                    "h2": ["Poppins"],
+                    "h1-mobile": ["Poppins"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Poppins"],
+                    "body-md": ["Inter"],
+                    "h1": ["Poppins"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h1-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 98, 161, 0.12);
+        }
+        .premium-shadow {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 20px 20px rgba(0, 98, 161, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+<a href="index.html" class="flex items-center gap-base cursor-pointer">
+<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
+<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+</a>
+<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
+<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<!-- Services Dropdown container -->
+<div class="relative group h-full flex items-center">
+  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+    <span>Services</span>
+    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+  </button>
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+  </div>
+</div>
+<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+</div>
+<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+<button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+<a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+<a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="flex flex-col items-center gap-sm">
+  <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+  <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+</div>
+<a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+<a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+<a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+<a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+<main class="pt-[122px]">
+<!-- 3. Hero Banner (Blue gradient, 'Blogs' title) -->
+<section class="relative h-[320px] bg-gradient-to-br from-primary via-primary-container to-on-primary-fixed-variant flex items-center overflow-hidden">
+<!-- Decorative abstract circles -->
+<div class="absolute top-[-50%] left-[-10%] w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-30%] right-[-5%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="relative px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<nav class="flex items-center gap-2 text-white/60 font-label-caps text-[12px] mb-4">
+<span><a href="index.html" class="hover:underline text-white/60">HOME</a></span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-white">BLOGS</span>
+</nav>
+<h1 class="font-h1 text-h1 text-white mb-4">Insights &amp; Innovation</h1>
+<p class="font-body-lg text-body-lg text-white/80">Explore the latest trends in software engineering, digital transformation, and business strategy from Zigma Software's experts.</p>
+</div>
+</div>
+</section>
+<!-- 4. Blog Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Blog Card 1 -->
+<article class="bg-white rounded-[20px] overflow-hidden premium-shadow hover-lift group">
+<div class="relative h-[240px] overflow-hidden">
+<img alt="Mobile App Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated mobile app development scene with a modern smartphone displaying a sleek, high-fidelity corporate user interface. Professional software developers work in a brightly lit, minimalist office environment with soft blue and white tones. The lighting is crisp and modern, reflecting a premium enterprise software company aesthetic with clean lines and premium technology." src="https://lh3.googleusercontent.com/aida/AP1WRLsQqwiB45-uT-o8jkqxFOkz7sUsYsJKuj3nso5C-F3vJgF7lgyiad1B9LJAXdBol9vqm9LJVnKToyi6JkxkkbN1rIbXm6hKRXIKn7OaKUsaxvGiVAN9U1g1_5JbdlVXoWrcibmWd8guAWyO6VyMix5Gzpcd9-Ucz6KwsV0cUJCnb-zY7-kBVjNUAJSq9618ZssPClI3neQ5TSFmAyX7_XZ8q18v_YqvSXM0xel7U7LzjyqriqJBjNXmA0Mf"/>
+<div class="absolute top-4 left-4 bg-secondary text-white font-label-caps text-[11px] px-3 py-1.5 rounded-full">DEVELOPMENT</div>
+</div>
+<div class="p-card-padding flex flex-col gap-4">
+<span class="font-label-caps text-[12px] text-outline">MARCH 2, 2026</span>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight group-hover:text-primary transition-colors">Mobile App Development Company in Erode</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Discover why Zigma is the leading choice for businesses in Erode seeking cutting-edge mobile solutions that drive engagement and ROI.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-bold font-body-md mt-2 group/link" href="#">
+                            Read More 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Blog Card 2 -->
+<article class="bg-white rounded-[20px] overflow-hidden premium-shadow hover-lift group">
+<div class="relative h-[240px] overflow-hidden">
+<img alt="Facebook Marketing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional social media marketing dashboard displayed on a high-resolution tablet. The visual composition features vibrant analytics charts and marketing metrics in shades of primary blue and accents of red. The background is a clean, white corporate studio with soft ambient shadows, conveying a sense of strategic business growth and digital authority." src="https://lh3.googleusercontent.com/aida/AP1WRLsSX9YGMJTbmsavQ_WyVm2Hsa_DmlO1tL43T3HfDCQM-1nFFKrMgq1riybZlsXTMyVSWngBNfAdqk5p2jvn5TplA6d5Bg0xG5pGi9cqeP0001_k4bi_LQ7aNdBbieQHYAOpj3DCfOjJmz5C6gm0P1EOOJt0M8nKtDCnHCHfvHkNrbkSpHd5kHEJDXmJqw-3lXTqHcK6vVlNP55vKU3h9RR7UoKBwMvl0ghy_GhVtm_84KL7aS9OGC-MD5M1"/>
+<div class="absolute top-4 left-4 bg-secondary text-white font-label-caps text-[11px] px-3 py-1.5 rounded-full">MARKETING</div>
+</div>
+<div class="p-card-padding flex flex-col gap-4">
+<span class="font-label-caps text-[12px] text-outline">FEBRUARY 28, 2026</span>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight group-hover:text-primary transition-colors">The Power of Facebook Marketing for Business Growth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Learn how to leverage sophisticated social algorithms to connect with your target audience and scale your enterprise reach effectively.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-bold font-body-md mt-2 group/link" href="#">
+                            Read More 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Blog Card 3 -->
+<article class="bg-white rounded-[20px] overflow-hidden premium-shadow hover-lift group">
+<div class="relative h-[240px] overflow-hidden">
+<img alt="Web Design &amp; Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-end web design workspace featuring a large 5K monitor showing a sophisticated enterprise web application. The design language is minimalist with vast whitespace and premium typography. The room has soft, natural daylight, emphasizing a high-contrast palette of white and deep blue, representing professional web development excellence." src="https://lh3.googleusercontent.com/aida/AP1WRLurPq59cNxciEhqYHoQR_S9mvGd0IR0c66futGZdrr-ets-zYTahkljXeE2kg8iTI14wR1NhCBfcrF-EGtRGwFAdSWwMXknKFrZDAlOQYJJWVPiws7vW86jGb59RZ1oYPlWCl9wRGFnnM02Coh4G2Tq-Gjz1uwAWnoQIC1zic9xPtgQ7O46Mr3JAa4lRBqZgqVd5tS8KGEloGEeu3Z8y8zc0_bHPr2QHLwn_vPcex7-azSOvGyivKTjzY3I"/>
+<div class="absolute top-4 left-4 bg-secondary text-white font-label-caps text-[11px] px-3 py-1.5 rounded-full">WEB DESIGN</div>
+</div>
+<div class="p-card-padding flex flex-col gap-4">
+<span class="font-label-caps text-[12px] text-outline">FEBRUARY 27, 2026</span>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight group-hover:text-primary transition-colors">Transform Your Business with Web Design &amp; Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Your website is your digital storefront. Explore how premium design and robust engineering can redefine your brand identity.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-bold font-body-md mt-2 group/link" href="#">
+                            Read More 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- 5. Pagination (Rounded buttons) -->
+<div class="mt-20 flex justify-center items-center gap-3">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center font-body-md font-bold">1</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary-container hover:text-primary-container transition-all font-body-md">2</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary-container hover:text-primary-container transition-all font-body-md">3</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- 6. Footer (4-column, dark navy) -->
+<!-- Applying JSON Footer attributes -->
+<footer class="bg-on-primary-fixed pt-20 pb-10 mt-auto text-primary-fixed-dim">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto w-full">
+<div class="flex flex-col gap-6">
+<div class="font-h3 text-h3 text-primary-fixed">Zigma Software</div>
+<p class="font-body-md text-surface-variant/70 leading-relaxed">
+                    Empowering global enterprises with bespoke software solutions, driving innovation through precision engineering and human-centric design.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary-fixed transition-colors cursor-pointer text-white">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary-fixed transition-colors cursor-pointer text-white">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary-fixed transition-colors cursor-pointer text-white">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-h3 text-[18px] text-white">Services</h4>
+<ul class="flex flex-col gap-4 font-body-md text-surface-variant/70">
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Custom Software</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Mobile Apps</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Cloud Engineering</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Digital Marketing</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-h3 text-[18px] text-white">Company</h4>
+<ul class="flex flex-col gap-4 font-body-md text-surface-variant/70">
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="about.html">About Us</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="customer.html">Portfolio</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="testimonials.html">Testimonials</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-h3 text-[18px] text-white">Contact</h4>
+<ul class="flex flex-col gap-4 font-body-md text-surface-variant/70">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+<span>Door No: 4/1c,12-A, Annamalai Gounder Layout,<br/>Erode, Tamil Nadu, India.</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">mail</span>
+<span>info@zigmasoftware.in</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">phone_in_talk</span>
+<span>+91 99941 40474</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- 7. Copyright Bar (Social icons, gradient border top) -->
+<div class="border-t border-transparent relative mt-10">
+<!-- Animated Gradient Border -->
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary-container/50 to-transparent"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-surface-variant/50">
+                    © 2024 Zigma Software. All rights reserved.
+                </p>
+<div class="flex items-center gap-8 font-label-caps text-[11px] text-surface-variant/50">
+<a class="hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
+<a class="hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="hover:text-white transition-colors" href="#">COOKIE POLICY</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+        });
+
+        // Micro-interactions
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.style.transform = 'scale(0.96)';
+            });
+            el.addEventListener('mouseup', () => {
+                el.style.transform = '';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = '';
+            });
+        });
+
+        // Header scroll behavior
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 100) {
+                    header.classList.add('backdrop-blur-md', 'bg-surface/90');
+                } else {
+                    header.classList.remove('backdrop-blur-md', 'bg-surface/90');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+    </script>
+</body></html>
