@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en"><head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Zigma Software | Premium Mobile App Development</title>
@@ -9,100 +10,179 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "outline-variant": "#c0c7d2",
-                        "surface-container": "#e7eeff",
-                        "on-secondary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "primary-fixed": "#d0e4ff",
-                        "on-error": "#ffffff",
-                        "on-background": "#111c2d",
-                        "surface-bright": "#f9f9ff",
-                        "secondary-container": "#db3238",
-                        "on-primary-fixed-variant": "#00497b",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed-dim": "#ffb3ae",
-                        "tertiary-fixed": "#ffe088",
-                        "secondary": "#b71323",
-                        "on-tertiary-fixed": "#241a00",
-                        "on-surface": "#111c2d",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed-dim": "#e9c349",
-                        "on-tertiary-fixed-variant": "#574500",
-                        "on-secondary-container": "#fffbff",
-                        "error": "#ba1a1a",
-                        "secondary-fixed": "#ffdad7",
-                        "on-primary-container": "#e6f0ff",
-                        "surface-container-high": "#dee8ff",
-                        "surface-container-low": "#f0f3ff",
-                        "on-tertiary-container": "#4e3d00",
-                        "on-tertiary": "#ffffff",
-                        "surface-tint": "#0062a1",
-                        "background": "#f9f9ff",
-                        "inverse-surface": "#263143",
-                        "primary-container": "#0670b7",
-                        "primary": "#005791",
-                        "inverse-primary": "#9ccaff",
-                        "on-primary-fixed": "#001d35",
-                        "outline": "#717882",
-                        "on-surface-variant": "#404751",
-                        "inverse-on-surface": "#ecf1ff",
-                        "surface": "#f9f9ff",
-                        "surface-dim": "#cfdaf2",
-                        "surface-container-highest": "#d8e3fb",
-                        "primary-fixed-dim": "#9ccaff",
-                        "tertiary-container": "#cca72f",
-                        "surface-variant": "#d8e3fb",
-                        "on-secondary-fixed-variant": "#930016",
-                        "tertiary": "#735c00",
-                        "on-secondary-fixed": "#410005",
-                        "on-primary": "#ffffff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                      "base": "8px",
-                      "container-margin-desktop": "40px",
-                      "container-margin-mobile": "16px",
-                      "gutter": "16px",
-                      "lg": "24px",
-                      "md": "16px",
-                      "sm": "12px",
-                      "xl": "32px",
-                      "xs": "4px"
-              },
-                    "fontFamily": {
-                        "label-sm": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "label-md": ["Inter"],
-                        "headline-lg": ["Hanken Grotesk"],
-                        "body-md": ["Inter"],
-                        "title-lg": ["Hanken Grotesk"],
-                        "headline-md": ["Hanken Grotesk"],
-                        "headline-lg-mobile": ["Hanken Grotesk"],
-                        "display-lg": ["Hanken Grotesk"]
-                    },
-                    "fontSize": {
-                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
-                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
-                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
-                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
-                    }
-                },
-            },
+        "darkMode": "class",
+        "theme": {
+                "extend": {
+                        "colors": {
+                                "outline-variant": "#c0c7d2",
+                                "surface-container": "#e7eeff",
+                                "on-secondary": "#ffffff",
+                                "error-container": "#ffdad6",
+                                "primary-fixed": "#d0e4ff",
+                                "on-error": "#ffffff",
+                                "on-background": "#111c2d",
+                                "surface-bright": "#f9f9ff",
+                                "secondary-container": "#db3238",
+                                "on-primary-fixed-variant": "#00497b",
+                                "surface-container-lowest": "#ffffff",
+                                "secondary-fixed-dim": "#ffb3ae",
+                                "tertiary-fixed": "#ffe088",
+                                "secondary": "#b71323",
+                                "on-tertiary-fixed": "#241a00",
+                                "on-surface": "#111c2d",
+                                "on-error-container": "#93000a",
+                                "tertiary-fixed-dim": "#e9c349",
+                                "on-tertiary-fixed-variant": "#574500",
+                                "on-secondary-container": "#fffbff",
+                                "error": "#ba1a1a",
+                                "secondary-fixed": "#ffdad7",
+                                "on-primary-container": "#e6f0ff",
+                                "surface-container-high": "#dee8ff",
+                                "surface-container-low": "#f0f3ff",
+                                "on-tertiary-container": "#4e3d00",
+                                "on-tertiary": "#ffffff",
+                                "surface-tint": "#0062a1",
+                                "background": "#f9f9ff",
+                                "inverse-surface": "#263143",
+                                "primary-container": "#0670b7",
+                                "primary": "#005791",
+                                "inverse-primary": "#9ccaff",
+                                "on-primary-fixed": "#001d35",
+                                "outline": "#717882",
+                                "on-surface-variant": "#404751",
+                                "inverse-on-surface": "#ecf1ff",
+                                "surface": "#f9f9ff",
+                                "surface-dim": "#cfdaf2",
+                                "surface-container-highest": "#d8e3fb",
+                                "primary-fixed-dim": "#9ccaff",
+                                "tertiary-container": "#cca72f",
+                                "surface-variant": "#d8e3fb",
+                                "on-secondary-fixed-variant": "#930016",
+                                "tertiary": "#735c00",
+                                "on-secondary-fixed": "#410005",
+                                "on-primary": "#ffffff"
+                        },
+                        "borderRadius": {
+                                "DEFAULT": "0.125rem",
+                                "lg": "0.25rem",
+                                "xl": "0.5rem",
+                                "full": "0.75rem"
+                        },
+                        "spacing": {
+                                "base": "8px",
+                                "container-margin-desktop": "40px",
+                                "container-margin-mobile": "16px",
+                                "gutter": "16px",
+                                "lg": "24px",
+                                "md": "16px",
+                                "sm": "12px",
+                                "xl": "32px",
+                                "xs": "4px"
+                        },
+                        "fontFamily": {
+                                "poppins": [
+                                        "Poppins",
+                                        "sans-serif"
+                                ],
+                                "label-sm": [
+                                        "Inter"
+                                ],
+                                "body-lg": [
+                                        "Inter"
+                                ],
+                                "label-md": [
+                                        "Inter"
+                                ],
+                                "headline-lg": [
+                                        "Hanken Grotesk"
+                                ],
+                                "body-md": [
+                                        "Inter"
+                                ],
+                                "title-lg": [
+                                        "Hanken Grotesk"
+                                ],
+                                "headline-md": [
+                                        "Hanken Grotesk"
+                                ],
+                                "headline-lg-mobile": [
+                                        "Hanken Grotesk"
+                                ],
+                                "display-lg": [
+                                        "Hanken Grotesk"
+                                ]
+                        },
+                        "fontSize": {
+                                "label-sm": [
+                                        "12px",
+                                        {
+                                                "lineHeight": "16px",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "body-lg": [
+                                        "18px",
+                                        {
+                                                "lineHeight": "28px",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "label-md": [
+                                        "14px",
+                                        {
+                                                "lineHeight": "20px",
+                                                "letterSpacing": "0.01em",
+                                                "fontWeight": "500"
+                                        }
+                                ],
+                                "headline-lg": [
+                                        "32px",
+                                        {
+                                                "lineHeight": "40px",
+                                                "letterSpacing": "-0.01em",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "body-md": [
+                                        "16px",
+                                        {
+                                                "lineHeight": "24px",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "title-lg": [
+                                        "20px",
+                                        {
+                                                "lineHeight": "28px",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "headline-md": [
+                                        "24px",
+                                        {
+                                                "lineHeight": "32px",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "headline-lg-mobile": [
+                                        "28px",
+                                        {
+                                                "lineHeight": "36px",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "display-lg": [
+                                        "48px",
+                                        {
+                                                "lineHeight": "56px",
+                                                "letterSpacing": "-0.02em",
+                                                "fontWeight": "700"
+                                        }
+                                ]
+                        }
+                }
         }
+}
     </script>
 <style>
         .material-symbols-outlined {
@@ -122,7 +202,25 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        .wave-divider .shape-fill {
+            fill: #f9f9ff;
+        }    </style>
 <style>
     body {
       min-height: max(884px, 100dvh);
@@ -140,37 +238,36 @@
 </div>
 </div>
 <!-- Navigation Header -->
-<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
 <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
-<a href="index.html" class="flex items-center gap-base cursor-pointer">
-<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
-<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+<a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+<img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
-<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
-<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
-<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
 <!-- Services Dropdown container -->
 <div class="relative group h-full flex items-center">
-  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+  <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
     <span>Services</span>
     <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
   </button>
   <!-- Dropdown Menu -->
   <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
-    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
-    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
-    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
-    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
-    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+    <!-- Social Media Marketing removed -->
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
-<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
-<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
-<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
-<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+<a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
 </div>
-<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -189,7 +286,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+    <!-- Social Media Marketing removed -->
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -197,28 +294,19 @@
 <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
 <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
 </div>
-<!-- Hero Section -->
-<section class="relative w-full h-[600px] md:h-[700px] overflow-hidden bg-inverse-surface">
-<div class="absolute inset-0">
-<img alt="Future Mobile Tech" class="w-full h-full object-cover opacity-40" data-alt="A futuristic and sleek composition showing multiple semi-transparent smartphones hovering in a dark, atmospheric studio. The lighting is a mix of deep royal blue and neon red accents, highlighting the thin glass edges of the devices. Digital data streams and glowing interface elements float around the phones, creating a high-end SaaS aesthetic that communicates power and precision. The mood is professional and technologically advanced." src="assets/images/hero_command_center.png"/>
+<!-- Hero Banner -->
+<section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="Mobile App Development Hero">
+<div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
-<div class="absolute inset-0 bg-gradient-to-b from-inverse-surface/80 via-inverse-surface/40 to-transparent"></div>
-<div class="relative z-10 h-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col justify-center items-start">
-<h1 class="text-white font-display-lg text-display-lg md:text-[64px] leading-tight mb-md animate-fade-in">
-                Mobile App <br/><span class="text-primary-fixed">Development</span>
-</h1>
-<p class="text-surface-variant text-body-lg max-w-2xl mb-xl">
-                Build powerful Android and iOS applications that transform your business operations and elevate user experiences to global standards.
-            </p>
-<div class="flex gap-md">
-<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-label-md hover:bg-primary-container transition-all">Start Project</button>
-<button class="border border-white/30 text-white px-xl py-md rounded-xl font-label-md hover:bg-white/10 transition-all">View Portfolio</button>
+<div class="relative z-10 text-white">
+<h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Mobile App Development</h1>
+<p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Services <span class="mx-xs">&gt;</span> Mobile Development</p>
 </div>
-</div>
-<!-- Wave Divider -->
-<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-<svg class="relative block w-full h-[60px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.83C0,95.83,161,122.52,321.39,56.44Z"></path>
+<div class="wave-divider">
+<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
 </svg>
 </div>
 </section>
@@ -442,78 +530,163 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-[#001D35] text-white py-xl md:py-32 px-container-margin-mobile md:px-container-margin-desktop">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
-<!-- Col 1 -->
+<footer class="bg-[#001e2d] pt-20 pb-8 text-on-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="space-y-8">
+<a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
+<p class="text-surface-variant/70 text-lg leading-relaxed font-medium">
+                Zigma Software, Erode is a trusted digital solutions company delivering web, mobile app, and software solutions to grow your business.
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</div>
+</div>
 <div>
-<div class="flex items-center gap-xs mb-lg">
-<span class="material-symbols-outlined text-primary-fixed text-headline-md" data-icon="rocket_launch">rocket_launch</span>
-<span class="text-headline-md font-bold text-surface-bright">Zigma Software</span>
-</div>
-<p class="text-surface-variant opacity-80 mb-lg">
-                    Premium mobile application development for the enterprise era. We transform complexity into simplicity.
-                </p>
-<div class="flex gap-md">
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
-<span class="material-symbols-outlined text-[20px]">public</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
-<span class="material-symbols-outlined text-[20px]">share</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gradient-to-tr hover:from-primary hover:to-secondary transition-all" href="#">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-</a>
-</div>
-</div>
-<!-- Col 2 -->
-<div>
-<h4 class="text-title-lg font-bold mb-lg">Services</h4>
-<ul class="space-y-sm text-surface-variant">
-<li><a class="hover:text-primary-fixed transition-colors" href="web-development.html">Web Development</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="mobile-development.html">Mobile Apps</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="seo-services.html">SEO Services</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="social-marketing.html">Social Marketing</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Get In Touch</h4>
+<ul class="space-y-6 text-surface-variant/80 font-medium">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+<span class="">Door No: 4/1c.12-A, Annamalai Gounder Layout, 1st Floor, Near Hotel Vignesh, Mettur Road, Erode. Tamil Nadu, India</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">phone</span>
+<span class="">+91-9942364454, 9791902386</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+<span class="">info@zigmasoftware.in</span>
+</li>
 </ul>
 </div>
-<!-- Col 3 -->
 <div>
-<h4 class="text-title-lg font-bold mb-lg">Company</h4>
-<ul class="space-y-sm text-surface-variant">
-<li><a class="hover:text-primary-fixed transition-colors" href="about.html">About Us</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="customer.html">Portfolio</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="testimonials.html">Testimonials</a></li>
-<li><a class="hover:text-primary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Important Links</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="about.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> About Us</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="products.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Products</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Services</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="blog.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Blogs</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="contact.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Contact Us</a></li>
 </ul>
 </div>
-<!-- Col 4 -->
 <div>
-<h4 class="text-title-lg font-bold mb-lg">Contact</h4>
-<p class="text-surface-variant mb-sm">Door No: 4/1c,12-A, Annamalai Gounder Layout, Erode, Tamil Nadu, India.</p>
-<p class="text-surface-variant mb-sm">info@zigmasoftware.in</p>
-<p class="text-surface-variant">+91 99941 40474</p>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Our Services</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
+<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
+</ul>
 </div>
 </div>
-<div class="max-w-7xl mx-auto mt-32 border-t border-white/10 pt-lg text-center">
-<div class="bg-gradient-to-r from-primary to-secondary h-1 w-full mb-lg rounded-full"></div>
-<p class="text-label-sm text-surface-variant opacity-60">© 2024 Zigma Software. Premium App Development. All rights reserved.</p>
+<div class="border-t border-white/5 pt-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-surface-variant/50 text-sm font-medium">
+<p class="">© 2024 Zigma Software. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
 </div>
 </footer>
 <script>
         // Mobile menu toggle logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
+        // Mobile menu toggle and active path highlight logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+ 
+        if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
 
-            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.remove('hidden');
-                });
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
+        // Active page detection and highlight
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const servicePaths = [
+            'web-development.html',
+            'mobile-development.html',
+            'seo-services.html',
+            /* social-marketing removed */
+            'software-support.html'
+        ];
+
+        // 1. Highlight Desktop Nav Items
+        const desktopLinks = document.querySelectorAll('#main-nav a, #main-nav button');
+        desktopLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
+                }
+            } else {
+                // Services dropdown parent button
+                if (link.textContent.trim().toLowerCase().includes('services') && servicePaths.includes(currentPath)) {
+                    isActive = true;
+                }
+            }
+
+            if (isActive) {
+                link.classList.remove('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
+                link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+            } else {
+                link.classList.remove('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                link.classList.add('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
             }
         });
+
+        // 2. Highlight Mobile Nav Items
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
+                }
+            }
+
+            if (isActive) {
+                if (link.classList.contains('rounded-full')) {
+                    // Mobile Contact button when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                } else {
+                    // Other mobile items when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.remove('hover:text-secondary');
+                }
+            } else {
+                if (link.classList.contains('rounded-full') && href && href.endsWith('contact.html')) {
+                    // Mobile Contact button when inactive (bordered layout)
+                    link.classList.remove('bg-[#EC3F43]', 'hover:brightness-110');
+                    link.classList.add('border', 'border-white/20', 'text-white', 'hover:bg-white/10');
+                } else {
+                    // Other mobile items when inactive
+                    link.classList.remove('bg-[#EC3F43]', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.add('hover:text-secondary');
+                }
+            }
+        });
+    });
 
         // Scroll Reveal Animation
         const reveals = document.querySelectorAll('.reveal');

@@ -1,147 +1,283 @@
 <!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Customers | Zigma Software</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Our Customers | Zigma Software</title>
 <script src="assets/js/tailwind.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-container": "#db3238",
-                      "primary-fixed-dim": "#9ccaff",
-                      "on-secondary-fixed-variant": "#930016",
-                      "inverse-primary": "#9ccaff",
-                      "on-tertiary": "#ffffff",
-                      "on-primary": "#ffffff",
-                      "secondary-fixed": "#ffdad7",
-                      "tertiary-container": "#cca72f",
-                      "primary": "#005791",
-                      "on-surface": "#111c2d",
-                      "inverse-on-surface": "#ecf1ff",
-                      "surface-tint": "#0062a1",
-                      "primary-fixed": "#d0e4ff",
-                      "on-surface-variant": "#404751",
-                      "on-primary-fixed": "#001d35",
-                      "on-background": "#111c2d",
-                      "tertiary-fixed-dim": "#e9c349",
-                      "outline-variant": "#c0c7d2",
-                      "surface-dim": "#cfdaf2",
-                      "inverse-surface": "#263143",
-                      "background": "#f9f9ff",
-                      "surface-container-highest": "#d8e3fb",
-                      "outline": "#717882",
-                      "on-tertiary-container": "#4e3d00",
-                      "on-primary-container": "#e6f0ff",
-                      "on-tertiary-fixed-variant": "#574500",
-                      "on-secondary-fixed": "#410005",
-                      "error-container": "#ffdad6",
-                      "primary-container": "#0670b7",
-                      "on-error": "#ffffff",
-                      "surface-container": "#e7eeff",
-                      "on-error-container": "#93000a",
-                      "surface-bright": "#f9f9ff",
-                      "secondary": "#b71323",
-                      "surface-container-lowest": "#ffffff",
-                      "error": "#ba1a1a",
-                      "on-secondary": "#ffffff",
-                      "secondary-fixed-dim": "#ffb3ae",
-                      "surface": "#f9f9ff",
-                      "surface-variant": "#d8e3fb",
-                      "on-secondary-container": "#fffbff",
-                      "surface-container-high": "#dee8ff",
-                      "on-tertiary-fixed": "#241a00",
-                      "surface-container-low": "#f0f3ff",
-                      "tertiary": "#735c00",
-                      "tertiary-fixed": "#ffe088",
-                      "on-primary-fixed-variant": "#00497b"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "base": "8px",
-                      "container-margin-desktop": "40px",
-                      "container-margin-mobile": "16px",
-                      "gutter": "16px",
-                      "lg": "24px",
-                      "md": "16px",
-                      "sm": "12px",
-                      "xl": "32px",
-                      "xs": "4px"
-              },
-              "fontFamily": {
-                      "headline-lg": ["Hanken Grotesk"],
-                      "label-md": ["Inter"],
-                      "headline-md": ["Hanken Grotesk"],
-                      "title-lg": ["Hanken Grotesk"],
-                      "display-lg": ["Hanken Grotesk"],
-                      "body-lg": ["Inter"],
-                      "label-sm": ["Inter"],
-                      "headline-lg-mobile": ["Hanken Grotesk"],
-                      "body-md": ["Inter"],
-                      "poppins": ["Poppins", "sans-serif"]
-              },
-              "fontSize": {
-                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
-                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
-                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
-                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-              }
-            },
-          },
+        "darkMode": "class",
+        "theme": {
+                "extend": {
+                        "colors": {
+                                "surface": "#f9f9fc",
+                                "on-tertiary-fixed": "#001e2d",
+                                "surface-dim": "#dadadc",
+                                "on-secondary-container": "#fffbff",
+                                "outline-variant": "#c2c6d1",
+                                "primary-fixed-dim": "#a3c9ff",
+                                "surface-container-lowest": "#ffffff",
+                                "tertiary-fixed": "#c6e7ff",
+                                "surface-container-high": "#e8e8ea",
+                                "on-secondary": "#ffffff",
+                                "on-error": "#ffffff",
+                                "surface-bright": "#f9f9fc",
+                                "primary-fixed": "#d3e4ff",
+                                "secondary-fixed-dim": "#ffb3ae",
+                                "outline": "#727781",
+                                "on-primary-fixed-variant": "#004882",
+                                "on-primary-fixed": "#001c38",
+                                "on-background": "#1a1c1e",
+                                "background": "#f9f9fc",
+                                "on-secondary-fixed-variant": "#930015",
+                                "secondary-fixed": "#ffdad7",
+                                "surface-variant": "#e2e2e5",
+                                "surface-container-low": "#f3f3f6",
+                                "secondary": "#bb001e",
+                                "primary": "#003461",
+                                "error": "#ba1a1a",
+                                "primary-container": "#004b87",
+                                "surface-container-highest": "#e2e2e5",
+                                "inverse-surface": "#2f3133",
+                                "inverse-primary": "#a3c9ff",
+                                "on-tertiary": "#ffffff",
+                                "error-container": "#ffdad6",
+                                "tertiary-container": "#004f6f",
+                                "surface-tint": "#27609d",
+                                "on-surface": "#1a1c1e",
+                                "on-secondary-fixed": "#410004",
+                                "on-tertiary-container": "#55c4ff",
+                                "on-primary-container": "#8abcff",
+                                "on-error-container": "#93000a",
+                                "tertiary": "#00374f",
+                                "surface-container": "#eeeef0",
+                                "on-tertiary-fixed-variant": "#004c6b",
+                                "tertiary-fixed-dim": "#82cfff",
+                                "on-surface-variant": "#424750",
+                                "on-primary": "#ffffff",
+                                "secondary-container": "#e32130",
+                                "inverse-on-surface": "#f0f0f3"
+                        },
+                        "borderRadius": {
+                                "DEFAULT": "0.25rem",
+                                "lg": "0.5rem",
+                                "xl": "0.75rem",
+                                "full": "9999px"
+                        },
+                        "spacing": {
+                                "gutter": "24px",
+                                "margin-desktop": "64px",
+                                "margin-mobile": "16px",
+                                "base": "8px",
+                                "container-max": "1280px",
+                                "container-margin-desktop": "40px",
+                                "container-margin-mobile": "16px",
+                                "xs": "4px",
+                                "sm": "12px",
+                                "md": "16px",
+                                "lg": "24px",
+                                "xl": "32px"
+                        },
+                        "fontFamily": {
+                                "poppins": [
+                                        "Poppins",
+                                        "sans-serif"
+                                ],
+                                "label-sm": [
+                                        "Inter"
+                                ],
+                                "display-lg": [
+                                        "Inter"
+                                ],
+                                "body-md": [
+                                        "Inter"
+                                ],
+                                "title-md": [
+                                        "Inter"
+                                ],
+                                "body-lg": [
+                                        "Inter"
+                                ],
+                                "headline-lg-mobile": [
+                                        "Inter"
+                                ],
+                                "headline-lg": [
+                                        "Inter"
+                                ]
+                        },
+                        "fontSize": {
+                                "label-sm": [
+                                        "12px",
+                                        {
+                                                "lineHeight": "1",
+                                                "letterSpacing": "0.05em",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "display-lg": [
+                                        "48px",
+                                        {
+                                                "lineHeight": "1.1",
+                                                "letterSpacing": "-0.02em",
+                                                "fontWeight": "800"
+                                        }
+                                ],
+                                "body-md": [
+                                        "16px",
+                                        {
+                                                "lineHeight": "1.6",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "title-md": [
+                                        "20px",
+                                        {
+                                                "lineHeight": "1.4",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "body-lg": [
+                                        "18px",
+                                        {
+                                                "lineHeight": "1.6",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "headline-lg-mobile": [
+                                        "24px",
+                                        {
+                                                "lineHeight": "1.2",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "headline-lg": [
+                                        "32px",
+                                        {
+                                                "lineHeight": "1.2",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "label-md": [
+                                        "14px",
+                                        {
+                                                "lineHeight": "20px",
+                                                "letterSpacing": "0.01em",
+                                                "fontWeight": "500"
+                                        }
+                                ],
+                                "headline-md": [
+                                        "24px",
+                                        {
+                                                "lineHeight": "32px",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "title-lg": [
+                                        "20px",
+                                        {
+                                                "lineHeight": "28px",
+                                                "fontWeight": "600"
+                                        }
+                                ]
+                        }
+                }
         }
+}
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .shimmer-btn:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+        .vibrant-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .vibrant-card:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .color-bg-blue { background-color: #f0f7ff; }
+        .color-bg-blue:hover { background-color: #dbeafe; }
+        .color-bg-red { background-color: #fff1f2; }
+        .color-bg-red:hover { background-color: #ffe4e6; }
+        .color-bg-teal { background-color: #f0fdfa; }
+        .color-bg-teal:hover { background-color: #ccfbf1; }
+        .color-bg-purple { background-color: #faf5ff; }
+        .color-bg-purple:hover { background-color: #f3e8ff; }
+        .color-bg-amber { background-color: #fffbeb; }
+        .color-bg-amber:hover { background-color: #fef3c7; }
+        .color-bg-indigo { background-color: #eef2ff; }
+        .color-bg-indigo:hover { background-color: #e0e7ff; }
+    
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .customer-card {
             transition: all 0.3s ease;
         }
+
+        .customer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .customer-card:hover .icon-box {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
         .customer-card:hover .material-symbols-outlined {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            color: white;
         }
-        .wave-container {
-            position: relative;
-            background: linear-gradient(135deg, #005791 0%, #0670b7 100%);
+
+        .shimmer-bg {
+            background: linear-gradient(
+                45deg, 
+                transparent 25%, 
+                rgba(255,255,255,0.1) 50%, 
+                transparent 75%
+            );
+            background-size: 200% 200%;
+            animation: shimmer 8s linear infinite;
         }
-        .wave-divider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
-        .wave-divider svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 60px;
-        }
-        .wave-divider .shape-fill {
-            fill: #f9f9ff;
-        }
-    </style>
+
+</style>
+
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary selection:text-white">
 <!-- Top Contact Bar -->
 <div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
 <div class="flex items-center gap-md">
@@ -151,38 +287,38 @@
 <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
 </div>
 </div>
+
 <!-- Navigation Header -->
-<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
 <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
-<a href="index.html" class="flex items-center gap-base cursor-pointer">
-<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
-<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+<a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+<img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
-<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
-<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
-<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
 <!-- Services Dropdown container -->
 <div class="relative group h-full flex items-center">
-  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+  <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
     <span>Services</span>
     <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
   </button>
   <!-- Dropdown Menu -->
   <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
-    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
-    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
-    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
-    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
-    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+    <!-- Social Media Marketing removed -->
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
-<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
-<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
-<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
-<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+<a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
 </div>
-<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -201,7 +337,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+    <!-- Social Media Marketing removed -->
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -209,39 +345,30 @@
 <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
 <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
 </div>
-<!-- 3. Hero Banner -->
-<section class="wave-container pt-24 pb-32 text-center text-white relative">
-<div class="max-w-7xl mx-auto px-container-margin-desktop relative z-10">
-<h1 class="font-display-lg text-display-lg mb-md tracking-tight">Customers</h1>
-<nav class="flex justify-center items-center gap-base text-primary-fixed font-label-md">
-<a class="hover:underline" href="index.html">Home</a>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-white">Our Customers</span>
-</nav>
+
+
+
+<main class="bg-surface">
+<!-- Hero Banner -->
+<section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="Our Customers Hero">
+<div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
-<div class="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
-<div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white rounded-full blur-[120px] -translate-y-1/2"></div>
+<div class="relative z-10 text-white">
+<h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Our Customers</h1>
+<p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Customers</p>
 </div>
 <div class="wave-divider">
-<svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
 <path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
 </svg>
 </div>
 </section>
-<!-- 4. Customers Section -->
-<main class="py-xl bg-background">
-<div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface relative inline-block">
-                    OUR CUSTOMERS
-                    <span class="absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-primary to-secondary"></span>
-</h2>
-<p class="mt-lg text-on-surface-variant max-w-2xl mx-auto font-body-lg">
-                    Trusted by enterprise leaders across global industries to drive digital transformation and innovation.
-                </p>
-</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="max-w-container-max mx-auto">
 <!-- Industry Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 overflow-x-auto">
 <script>
                     const industries = [
                         { name: "Advertisement Agencies", icon: "campaign" },
@@ -287,14 +414,13 @@
                     ];
 
                     document.write(industries.map(ind => `
-                        <div class="customer-card group bg-surface-container-lowest border border-outline-variant h-[90px] rounded-[20px] p-md flex items-center justify-between cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(6,112,183,0.15)] hover:border-primary">
+                        <div class="customer-card group bg-white border border-outline-variant h-[90px] rounded-[20px] p-md flex items-center cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(6,112,183,0.15)] hover:border-primary">
                             <div class="flex items-center gap-md">
                                 <div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
                                     <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size: 24px;">${ind.icon}</span>
                                 </div>
                                 <span class="font-poppins text-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">${ind.name}</span>
                             </div>
-                            <span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
                         </div>
                     `).join(''));
                 </script>
@@ -303,9 +429,9 @@
 <section class="mt-32 mb-xl relative overflow-hidden rounded-xl bg-surface-container p-xl flex flex-col md:flex-row items-center gap-xl border border-outline-variant">
 <div class="flex-1 space-y-md">
 <span class="text-secondary font-bold tracking-widest uppercase text-xs">Case Study Spotlight</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">Revolutionizing Global Logistics</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface font-black">Revolutionizing Global Logistics</h3>
 <p class="text-on-surface-variant font-body-md">See how we helped one of the world's leading industrial groups optimize their entire supply chain using Zigma's proprietary AI-driven dashboard.</p>
-<button class="bg-primary text-white px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-colors flex items-center gap-base">
+<button class="bg-primary text-white px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-colors flex items-center gap-base font-bold">
                         Read Success Story
                         <span class="material-symbols-outlined text-[18px]">open_in_new</span>
 </button>
@@ -316,108 +442,181 @@
 </div>
 </section>
 </div>
+
 </main>
-<!-- 5. Footer -->
-<footer class="bg-[#001D35] text-white">
-<div class="max-w-7xl mx-auto px-container-margin-desktop py-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
-<!-- Brand Column -->
-<div class="space-y-md">
-<div class="flex items-center gap-base">
-<span class="material-symbols-outlined text-primary-fixed-dim text-[32px]">hub</span>
-<span class="font-headline-md text-headline-md text-primary-fixed">Zigma Software</span>
-</div>
-<p class="text-surface-variant font-body-md leading-relaxed">
-                    Pioneering enterprise software solutions with a commitment to precision, scalability, and long-term client success.
-                </p>
-<div class="flex gap-md">
-<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary transition-all duration-300" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-</a>
-<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary transition-all duration-300" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-</a>
-</div>
-</div>
-<!-- Solutions Column -->
-<div class="space-y-md">
-<h4 class="font-title-lg text-title-lg text-white relative inline-block pb-2">
-                    Solutions
-                    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-secondary"></span>
-</h4>
-<ul class="space-y-sm">
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="#">Enterprise ERP</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="#">Cloud Infrastructure</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="#">Data Analytics</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="#">Cyber Security</a></li>
-</ul>
-</div>
-<!-- Links Column -->
-<div class="space-y-md">
-<h4 class="font-title-lg text-title-lg text-white relative inline-block pb-2">
-                    Quick Links
-                    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-secondary"></span>
-</h4>
-<ul class="space-y-sm">
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="about.html">About Us</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="customer.html">Portfolio</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="testimonials.html">Testimonials</a></li>
-<li><a class="text-surface-variant hover:text-primary-fixed transition-all hover:translate-x-1 inline-block" href="contact.html">Contact Us</a></li>
-</ul>
-</div>
-<!-- Contact Column -->
-<div class="space-y-md">
-<h4 class="font-title-lg text-title-lg text-white relative inline-block pb-2">
-                    Get in Touch
-                    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-secondary"></span>
-</h4>
-<div class="space-y-sm">
-<p class="text-surface-variant flex items-start gap-base">
-<span class="material-symbols-outlined text-primary-fixed text-[20px]">location_on</span>
-                        Door No: 4/1c,12-A, Annamalai Gounder Layout,<br/>Erode, Tamil Nadu, India.
-                    </p>
-<p class="text-surface-variant flex items-center gap-base">
-<span class="material-symbols-outlined text-primary-fixed text-[20px]">mail</span>
-                        info@zigmasoftware.in
-                    </p>
-<p class="text-surface-variant flex items-center gap-base">
-<span class="material-symbols-outlined text-primary-fixed text-[20px]">phone_in_talk</span>
-                        +91 99941 40474
-                    </p>
-</div>
-</div>
-</div>
-<!-- Copyright Row -->
-<div class="border-t border-white/5 py-lg text-center">
-<p class="text-surface-variant font-label-sm">
-                © 2024 Zigma Software. All rights reserved. Precision in every line of code.
+</main>
+<!-- Footer -->
+<footer class="bg-[#001e2d] pt-20 pb-8 text-on-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="space-y-8">
+<a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
+<p class="text-surface-variant/70 text-lg leading-relaxed font-medium">
+                Zigma Software, Erode is a trusted digital solutions company delivering web, mobile app, and software solutions to grow your business.
             </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Get In Touch</h4>
+<ul class="space-y-6 text-surface-variant/80 font-medium">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+<span class="">Door No: 4/1c.12-A, Annamalai Gounder Layout, 1st Floor, Near Hotel Vignesh, Mettur Road, Erode. Tamil Nadu, India</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">phone</span>
+<span class="">+91-9942364454, 9791902386</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+<span class="">info@zigmasoftware.in</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Important Links</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="about.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> About Us</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="products.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Products</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Services</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="blog.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Blogs</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="contact.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Our Services</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
+<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-surface-variant/50 text-sm font-medium">
+<p class="">© 2024 Zigma Software. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
 </div>
 </footer>
 <script>
-        // Mobile menu toggle logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
+    // Mobile menu toggle logic
+    // Mobile menu toggle and active path highlight logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+ 
+        if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
 
-            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.remove('hidden');
-                });
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            }
-        });
+        // Active page detection and highlight
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const servicePaths = [
+            'web-development.html',
+            'mobile-development.html',
+            'seo-services.html',
+            /* social-marketing removed */
+            'software-support.html'
+        ];
 
-        // Sticky nav scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-md');
+        // 1. Highlight Desktop Nav Items
+        const desktopLinks = document.querySelectorAll('#main-nav a, #main-nav button');
+        desktopLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
+                }
             } else {
-                nav.classList.remove('shadow-md');
+                // Services dropdown parent button
+                if (link.textContent.trim().toLowerCase().includes('services') && servicePaths.includes(currentPath)) {
+                    isActive = true;
+                }
+            }
+
+            if (isActive) {
+                link.classList.remove('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
+                link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+            } else {
+                link.classList.remove('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                link.classList.add('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
             }
         });
-    </script>
+
+        // 2. Highlight Mobile Nav Items
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
+                }
+            }
+
+            if (isActive) {
+                if (link.classList.contains('rounded-full')) {
+                    // Mobile Contact button when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                } else {
+                    // Other mobile items when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.remove('hover:text-secondary');
+                }
+            } else {
+                if (link.classList.contains('rounded-full') && href && href.endsWith('contact.html')) {
+                    // Mobile Contact button when inactive (bordered layout)
+                    link.classList.remove('bg-[#EC3F43]', 'hover:brightness-110');
+                    link.classList.add('border', 'border-white/20', 'text-white', 'hover:bg-white/10');
+                } else {
+                    // Other mobile items when inactive
+                    link.classList.remove('bg-[#EC3F43]', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.add('hover:text-secondary');
+                }
+            }
+        });
+    });
+
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
 </body></html>

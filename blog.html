@@ -15,73 +15,73 @@
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-fixed-variant": "#574500",
-                    "surface-container-highest": "#d3e4fe",
-                    "surface-bright": "#f8f9ff",
-                    "on-secondary-fixed-variant": "#930016",
-                    "on-primary-container": "#e6f0ff",
-                    "primary-fixed": "#d0e4ff",
-                    "on-error-container": "#93000a",
-                    "secondary-container": "#db3238",
-                    "background": "#f8f9ff",
-                    "error": "#ba1a1a",
-                    "on-primary-fixed": "#001d35",
-                    "error-container": "#ffdad6",
-                    "surface-container-low": "#eff4ff",
-                    "on-tertiary": "#ffffff",
-                    "surface-tint": "#0062a1",
-                    "secondary": "#b71323",
-                    "on-tertiary-fixed": "#241a00",
-                    "on-tertiary-container": "#4e3d00",
-                    "surface-container-lowest": "#ffffff",
-                    "tertiary": "#735c00",
-                    "tertiary-container": "#cca72f",
-                    "on-primary": "#ffffff",
-                    "primary-container": "#0670b7",
-                    "on-surface-variant": "#404751",
-                    "on-error": "#ffffff",
-                    "on-secondary-fixed": "#410005",
-                    "inverse-surface": "#213145",
-                    "on-surface": "#0b1c30",
-                    "inverse-primary": "#9ccaff",
-                    "outline": "#717882",
-                    "surface-container-high": "#dce9ff",
-                    "on-background": "#0b1c30",
-                    "primary": "#005791",
-                    "surface-dim": "#cbdbf5",
-                    "secondary-fixed": "#ffdad7",
-                    "inverse-on-surface": "#eaf1ff",
-                    "surface": "#f8f9ff",
-                    "primary-fixed-dim": "#9ccaff",
-                    "secondary-fixed-dim": "#ffb3ae",
-                    "surface-container": "#e5eeff",
-                    "outline-variant": "#c0c7d2",
-                    "tertiary-fixed": "#ffe088",
-                    "surface-variant": "#d3e4fe",
-                    "on-secondary": "#ffffff",
-                    "on-secondary-container": "#fffbff",
-                    "tertiary-fixed-dim": "#e9c349",
-                    "on-primary-fixed-variant": "#00497b"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                      "base": "8px",
-                      "card-padding": "32px",
-                      "container-margin-desktop": "40px",
-                      "container-margin-mobile": "16px",
-                      "container-max": "1280px",
-                      "gutter": "24px",
-                      "lg": "24px",
-                      "margin-desktop": "48px",
-                      "margin-mobile": "16px",
+        <!-- Top Contact Bar -->
+        <div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+            <div class="flex items-center gap-md">
+                <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+            </div>
+            <div class="flex items-center gap-md">
+                <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+            </div>
+        </div>
+
+        <!-- Navigation Header -->
+        <nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
+            <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+                <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+                    <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
+                    <!-- Services Dropdown container -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
+                            <span>Services</span>
+                            <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+                            <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+                            <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+                            <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+                            <!-- Social Media Marketing removed -->
+                            <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
+                        </div>
+                    </div>
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+                    <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+                    <a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
+                </div>
+                <button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Overlay) -->
+        <div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+            <button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+                <span class="material-symbols-outlined text-[32px]">close</span>
+            </button>
+            <a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+            <a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+            <a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+            <div class="flex flex-col items-center gap-sm">
+                <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+                <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+                <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+                <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+                <!-- Social Media Marketing removed -->
+                <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+            </div>
+            <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+            <a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+            <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+            <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+        </div>
                       "md": "16px",
                       "sm": "12px",
                       "xl": "32px",
@@ -141,37 +141,36 @@
 </div>
 </div>
 <!-- Navigation Header -->
-<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
 <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
-<a href="index.html" class="flex items-center gap-base cursor-pointer">
-<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
-<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+<a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+<img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
-<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
-<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
-<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
 <!-- Services Dropdown container -->
 <div class="relative group h-full flex items-center">
-  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+  <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
     <span>Services</span>
     <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
   </button>
   <!-- Dropdown Menu -->
   <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
-    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
-    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
-    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
-    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
-    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+    <!-- Social Media Marketing removed -->
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
-<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
-<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
-<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
-<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+<a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
 </div>
-<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -190,7 +189,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+    <!-- Social Media Marketing removed -->
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -198,22 +197,21 @@
 <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
 <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
 </div>
-<main class="pt-[122px]">
-<!-- 3. Hero Banner (Blue gradient, 'Blogs' title) -->
-<section class="relative h-[320px] bg-gradient-to-br from-primary via-primary-container to-on-primary-fixed-variant flex items-center overflow-hidden">
-<!-- Decorative abstract circles -->
-<div class="absolute top-[-50%] left-[-10%] w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl"></div>
-<div class="absolute bottom-[-30%] right-[-5%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl"></div>
-<div class="relative px-margin-desktop max-w-container-max mx-auto w-full">
-<div class="max-w-2xl">
-<nav class="flex items-center gap-2 text-white/60 font-label-caps text-[12px] mb-4">
-<span><a href="index.html" class="hover:underline text-white/60">HOME</a></span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="text-white">BLOGS</span>
-</nav>
-<h1 class="font-h1 text-h1 text-white mb-4">Insights &amp; Innovation</h1>
-<p class="font-body-lg text-body-lg text-white/80">Explore the latest trends in software engineering, digital transformation, and business strategy from Zigma Software's experts.</p>
+<main class="bg-surface">
+<!-- Hero Banner -->
+<section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="Blogs Hero">
+<div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
+<div class="relative z-10 text-white">
+<h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Insights &amp; Innovation</h1>
+<p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Blogs</p>
+</div>
+<div class="wave-divider">
+<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
 </div>
 </section>
 <!-- 4. Blog Grid -->
@@ -284,10 +282,10 @@
 </main>
 <!-- 6. Footer (4-column, dark navy) -->
 <!-- Applying JSON Footer attributes -->
-<footer class="bg-on-primary-fixed pt-20 pb-10 mt-auto text-primary-fixed-dim">
+<footer class="bg-[#001e2d] pt-20 pb-8 mt-auto text-on-tertiary">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto w-full">
 <div class="flex flex-col gap-6">
-<div class="font-h3 text-h3 text-primary-fixed">Zigma Software</div>
+<a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
 <p class="font-body-md text-surface-variant/70 leading-relaxed">
                     Empowering global enterprises with bespoke software solutions, driving innovation through precision engineering and human-centric design.
                 </p>
@@ -345,7 +343,7 @@
 <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary-container/50 to-transparent"></div>
 <div class="max-w-container-max mx-auto px-margin-desktop py-8 flex flex-col md:flex-row justify-between items-center gap-6">
 <p class="font-body-md text-surface-variant/50">
-                    © 2024 Zigma Software. All rights reserved.
+                    © 2024 Zigma Software. All Rights Reserved.
                 </p>
 <div class="flex items-center gap-8 font-label-caps text-[11px] text-surface-variant/50">
 <a class="hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
@@ -356,7 +354,7 @@
 </div>
 </footer>
 <script>
-        // Mobile menu toggle logic
+        // Mobile menu toggle and active path highlight logic
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
@@ -370,6 +368,80 @@
                     mobileMenu.classList.add('hidden');
                 });
             }
+
+            // Active page detection and highlight
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const servicePaths = [
+                'web-development.html',
+                'mobile-development.html',
+                'seo-services.html',
+                /* social-marketing removed */
+                'software-support.html'
+            ];
+
+            // 1. Highlight Desktop Nav Items
+            const desktopLinks = document.querySelectorAll('#main-nav a, #main-nav button');
+            desktopLinks.forEach(link => {
+                let isActive = false;
+                const href = link.getAttribute('href');
+                if (href) {
+                    const linkPath = href.split('/').pop();
+                    if (linkPath === currentPath) {
+                        isActive = true;
+                    } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                        isActive = true;
+                    }
+                } else {
+                    // Services dropdown parent button
+                    if (link.textContent.trim().toLowerCase().includes('services') && servicePaths.includes(currentPath)) {
+                        isActive = true;
+                    }
+                }
+
+                if (isActive) {
+                    link.classList.remove('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                } else {
+                    link.classList.remove('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                    link.classList.add('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
+                }
+            });
+
+            // 2. Highlight Mobile Nav Items
+            const mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(link => {
+                let isActive = false;
+                const href = link.getAttribute('href');
+                if (href) {
+                    const linkPath = href.split('/').pop();
+                    if (linkPath === currentPath) {
+                        isActive = true;
+                    } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                        isActive = true;
+                    }
+                }
+
+                if (isActive) {
+                    if (link.classList.contains('rounded-full')) {
+                        // Mobile Contact button when active
+                        link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                    } else {
+                        // Other mobile items when active
+                        link.classList.add('bg-[#EC3F43]', 'text-white', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                        link.classList.remove('hover:text-secondary');
+                    }
+                } else {
+                    if (link.classList.contains('rounded-full') && href && href.endsWith('contact.html')) {
+                        // Mobile Contact button when inactive (bordered layout)
+                        link.classList.remove('bg-[#EC3F43]', 'hover:brightness-110');
+                        link.classList.add('border', 'border-white/20', 'text-white', 'hover:bg-white/10');
+                    } else {
+                        // Other mobile items when inactive
+                        link.classList.remove('bg-[#EC3F43]', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                        link.classList.add('hover:text-secondary');
+                    }
+                }
+            });
         });
 
         // Micro-interactions

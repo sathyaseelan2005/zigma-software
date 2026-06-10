@@ -1,151 +1,298 @@
 <!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>About Us | Zigma Software</title>
 <script src="assets/js/tailwind.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        body {
-            background-color: #0b1326;
-            color: #dae2fd;
-            overflow-x: hidden;
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+        "darkMode": "class",
+        "theme": {
+                "extend": {
+                        "colors": {
+                                "surface": "#f9f9fc",
+                                "on-tertiary-fixed": "#001e2d",
+                                "surface-dim": "#dadadc",
+                                "on-secondary-container": "#fffbff",
+                                "outline-variant": "#c2c6d1",
+                                "primary-fixed-dim": "#a3c9ff",
+                                "surface-container-lowest": "#ffffff",
+                                "tertiary-fixed": "#c6e7ff",
+                                "surface-container-high": "#e8e8ea",
+                                "on-secondary": "#ffffff",
+                                "on-error": "#ffffff",
+                                "surface-bright": "#f9f9fc",
+                                "primary-fixed": "#d3e4ff",
+                                "secondary-fixed-dim": "#ffb3ae",
+                                "outline": "#727781",
+                                "on-primary-fixed-variant": "#004882",
+                                "on-primary-fixed": "#001c38",
+                                "on-background": "#1a1c1e",
+                                "background": "#f9f9fc",
+                                "on-secondary-fixed-variant": "#930015",
+                                "secondary-fixed": "#ffdad7",
+                                "surface-variant": "#e2e2e5",
+                                "surface-container-low": "#f3f3f6",
+                                "secondary": "#bb001e",
+                                "primary": "#003461",
+                                "error": "#ba1a1a",
+                                "primary-container": "#004b87",
+                                "surface-container-highest": "#e2e2e5",
+                                "inverse-surface": "#2f3133",
+                                "inverse-primary": "#a3c9ff",
+                                "on-tertiary": "#ffffff",
+                                "error-container": "#ffdad6",
+                                "tertiary-container": "#004f6f",
+                                "surface-tint": "#27609d",
+                                "on-surface": "#1a1c1e",
+                                "on-secondary-fixed": "#410004",
+                                "on-tertiary-container": "#55c4ff",
+                                "on-primary-container": "#8abcff",
+                                "on-error-container": "#93000a",
+                                "tertiary": "#00374f",
+                                "surface-container": "#eeeef0",
+                                "on-tertiary-fixed-variant": "#004c6b",
+                                "tertiary-fixed-dim": "#82cfff",
+                                "on-surface-variant": "#424750",
+                                "on-primary": "#ffffff",
+                                "secondary-container": "#e32130",
+                                "inverse-on-surface": "#f0f0f3"
+                        },
+                        "borderRadius": {
+                                "DEFAULT": "0.25rem",
+                                "lg": "0.5rem",
+                                "xl": "0.75rem",
+                                "full": "9999px"
+                        },
+                        "spacing": {
+                                "gutter": "24px",
+                                "margin-desktop": "64px",
+                                "margin-mobile": "16px",
+                                "base": "8px",
+                                "container-max": "1280px",
+                                "container-margin-desktop": "40px",
+                                "container-margin-mobile": "16px",
+                                "xs": "4px",
+                                "sm": "12px",
+                                "md": "16px",
+                                "lg": "24px",
+                                "xl": "32px"
+                        },
+                        "fontFamily": {
+                                "poppins": [
+                                        "Poppins",
+                                        "sans-serif"
+                                ],
+                                "label-sm": [
+                                        "Inter"
+                                ],
+                                "display-lg": [
+                                        "Inter"
+                                ],
+                                "body-md": [
+                                        "Inter"
+                                ],
+                                "title-md": [
+                                        "Inter"
+                                ],
+                                "body-lg": [
+                                        "Inter"
+                                ],
+                                "headline-lg-mobile": [
+                                        "Inter"
+                                ],
+                                "headline-lg": [
+                                        "Inter"
+                                ]
+                        },
+                        "fontSize": {
+                                "label-sm": [
+                                        "12px",
+                                        {
+                                                "lineHeight": "1",
+                                                "letterSpacing": "0.05em",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "display-lg": [
+                                        "48px",
+                                        {
+                                                "lineHeight": "1.1",
+                                                "letterSpacing": "-0.02em",
+                                                "fontWeight": "800"
+                                        }
+                                ],
+                                "body-md": [
+                                        "16px",
+                                        {
+                                                "lineHeight": "1.6",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "title-md": [
+                                        "20px",
+                                        {
+                                                "lineHeight": "1.4",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "body-lg": [
+                                        "18px",
+                                        {
+                                                "lineHeight": "1.6",
+                                                "fontWeight": "400"
+                                        }
+                                ],
+                                "headline-lg-mobile": [
+                                        "24px",
+                                        {
+                                                "lineHeight": "1.2",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "headline-lg": [
+                                        "32px",
+                                        {
+                                                "lineHeight": "1.2",
+                                                "fontWeight": "700"
+                                        }
+                                ],
+                                "label-md": [
+                                        "14px",
+                                        {
+                                                "lineHeight": "20px",
+                                                "letterSpacing": "0.01em",
+                                                "fontWeight": "500"
+                                        }
+                                ],
+                                "headline-md": [
+                                        "24px",
+                                        {
+                                                "lineHeight": "32px",
+                                                "fontWeight": "600"
+                                        }
+                                ],
+                                "title-lg": [
+                                        "20px",
+                                        {
+                                                "lineHeight": "28px",
+                                                "fontWeight": "600"
+                                        }
+                                ]
+                        }
+                }
         }
+}
+    </script>
+<style>
         .glass-card {
-            background: rgba(23, 31, 51, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .shimmer-btn {
             position: relative;
             overflow: hidden;
         }
-        .glass-card::before {
-            content: "";
+        .shimmer-btn::after {
+            content: '';
             position: absolute;
-            top: 0;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .shimmer-btn:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+        .vibrant-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .vibrant-card:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .color-bg-blue { background-color: #f0f7ff; }
+        .color-bg-blue:hover { background-color: #dbeafe; }
+        .color-bg-red { background-color: #fff1f2; }
+        .color-bg-red:hover { background-color: #ffe4e6; }
+        .color-bg-teal { background-color: #f0fdfa; }
+        .color-bg-teal:hover { background-color: #ccfbf1; }
+        .color-bg-purple { background-color: #faf5ff; }
+        .color-bg-purple:hover { background-color: #f3e8ff; }
+        .color-bg-amber { background-color: #fffbeb; }
+        .color-bg-amber:hover { background-color: #fef3c7; }
+        .color-bg-indigo { background-color: #eef2ff; }
+        .color-bg-indigo:hover { background-color: #e0e7ff; }
+    
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, #ffdad7 0%, transparent 50%),
+                        radial-gradient(at 100% 0%, #d3e4ff 0%, transparent 50%),
+                        radial-gradient(at 100% 100%, #c6e7ff 0%, transparent 50%),
+                        radial-gradient(at 0% 100%, #e2e2e5 0%, transparent 50%);
+        }
+
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
             left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
         }
-        .text-gradient-blue {
-            background: linear-gradient(135deg, #9ccaff 0%, #0670b7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
         }
-        .timeline-line {
-            background: linear-gradient(to bottom, #0670b7 0%, #bdc2ff 50%, #0670b7 100%);
+        .wave-divider .shape-fill {
+            fill: #f9f9ff;
         }
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .noise-overlay {
-            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-            opacity: 0.02;
-            pointer-events: none;
-        }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                "tertiary-fixed-dim": "#bdc2ff",
-                "surface-tint": "#9ccaff",
-                "surface-container-low": "#131b2e",
-                "on-primary-fixed-variant": "#00497b",
-                "on-secondary-fixed-variant": "#930016",
-                "outline": "#8a919c",
-                "on-primary-fixed": "#001d35",
-                "on-error-container": "#ffdad6",
-                "on-primary-container": "#e6f0ff",
-                "on-background": "#dae2fd",
-                "surface-bright": "#31394d",
-                "primary": "#9ccaff",
-                "on-tertiary": "#1b247f",
-                "surface-dim": "#0b1326",
-                "on-secondary-container": "#ffb3ae",
-                "on-secondary": "#68000c",
-                "surface-container-lowest": "#060e20",
-                "tertiary-fixed": "#e0e0ff",
-                "outline-variant": "#404751",
-                "inverse-on-surface": "#283044",
-                "error": "#ffb4ab",
-                "background": "#0b1326",
-                "tertiary": "#bdc2ff",
-                "on-tertiary-container": "#efedff",
-                "primary-fixed-dim": "#9ccaff",
-                "secondary-fixed-dim": "#ffb3ae",
-                "surface-container": "#171f33",
-                "on-surface-variant": "#c0c7d2",
-                "primary-fixed": "#d0e4ff",
-                "surface-variant": "#2d3449",
-                "inverse-primary": "#0062a1",
-                "tertiary-container": "#5b64be",
-                "on-secondary-fixed": "#410005",
-                "on-tertiary-fixed-variant": "#343d96",
-                "inverse-surface": "#dae2fd",
-                "error-container": "#93000a",
-                "on-error": "#690005",
-                "on-primary": "#003257",
-                "surface-container-highest": "#2d3449",
-                "surface": "#0b1326",
-                "secondary-fixed": "#ffdad7",
-                "on-tertiary-fixed": "#000767",
-                "on-surface": "#dae2fd",
-                "secondary": "#ffb3ae",
-                "surface-container-high": "#222a3d",
-                "secondary-container": "#a9011b",
-                "primary-container": "#0670b7",
-                "brand-red": "#EC3F43",
-                "brand-blue": "#0670B7"
-              },
-              "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px",
-                "executive": "20px"
-              },
-              "spacing": {
-                      "base": "8px",
-                      "container-margin-desktop": "40px",
-                      "container-margin-mobile": "16px",
-                      "container-max": "1440px",
-                      "gutter": "24px",
-                      "lg": "24px",
-                      "md": "16px",
-                      "sm": "12px",
-                      "xl": "32px",
-                      "xs": "4px",
-                      "xxl": "64px"
-              },
-              "fontFamily": {
-                "label-md": ["Geist"],
-                "body-md": ["Inter"],
-                "headline-md": ["Plus Jakarta Sans"],
-                "display-lg": ["Plus Jakarta Sans"],
-                "body-lg": ["Inter"]
-              }
-            }
-          }
-        }
-    </script>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="font-body-md text-on-surface bg-surface">
-<div class="noise-overlay fixed inset-0 z-[100]"></div>
+</style>
+
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary selection:text-white">
 <!-- Top Contact Bar -->
 <div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
 <div class="flex items-center gap-md">
@@ -155,38 +302,38 @@
 <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
 </div>
 </div>
+
 <!-- Navigation Header -->
-<nav class="sticky top-0 w-full z-50 bg-[#00497b] shadow-md border-b border-white/10 h-20 flex items-center" id="main-nav">
+<nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
 <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
-<a href="index.html" class="flex items-center gap-base cursor-pointer">
-<span class="material-symbols-outlined text-white text-[32px]">terminal</span>
-<span class="font-poppins font-bold text-headline-md text-white tracking-tight">Zigma Software</span>
+<a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+<img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-xl font-poppins text-label-md h-full">
-<a class="text-white hover:text-secondary transition-colors" href="index.html">Home</a>
-<a class="text-white hover:text-secondary transition-colors" href="about.html">About Us</a>
-<a class="text-white hover:text-secondary transition-colors" href="products.html">Products</a>
+<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
 <!-- Services Dropdown container -->
 <div class="relative group h-full flex items-center">
-  <button class="text-white hover:text-secondary font-semibold flex items-center gap-xs focus:outline-none">
+  <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
     <span>Services</span>
     <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
   </button>
   <!-- Dropdown Menu -->
   <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
-    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Web Design & Development</a>
-    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Mobile App Development</a>
-    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">SEO Services</a>
-    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Social Media Marketing</a>
-    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary" role="menuitem">Software Support</a>
+    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+    <!-- Social Media Marketing removed -->
+    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
-<a class="text-white hover:text-secondary transition-colors" href="customer.html">Customers</a>
-<a class="text-white hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
-<a class="text-white hover:text-secondary transition-colors" href="blog.html">Blogs</a>
-<a href="contact.html" class="bg-[#EC3F43] text-white px-md py-xs rounded font-bold hover:brightness-110 transition-all">Contact</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+<a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+<a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
 </div>
-<button class="lg:hidden text-white" id="mobile-menu-toggle">
+<button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -205,7 +352,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+    <!-- Social Media Marketing removed -->
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -213,343 +360,280 @@
 <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
 <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
 </div>
-<main>
+
+
+
+<main class="bg-surface">
 <!-- Hero Section -->
-<section class="relative min-h-[618px] flex flex-col items-center justify-center overflow-hidden px-gutter pt-xxl pb-xxl">
-<div class="absolute inset-0 bg-gradient-to-br from-surface-dim via-surface-container-low to-primary-container/20 z-0"></div>
-<!-- Animated Background Elements -->
-<div class="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] floating"></div>
-<div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-red/5 rounded-full blur-[120px] floating" style="animation-delay: 2s"></div>
-<div class="relative z-10 max-w-4xl text-center space-y-md">
-<nav class="flex justify-center items-center gap-xs text-on-surface-variant font-label-sm mb-lg">
-<a href="index.html" class="hover:text-primary cursor-pointer transition-colors">Home</a>
-<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
-<span class="text-primary">Company</span>
-</nav>
-<h1 class="font-display-lg text-display-lg tracking-tight leading-none text-on-surface">
-                    Architecting the <span class="text-gradient-blue">Next Generation</span> of Enterprise Software
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    Since 1991, Zigma has been the silent engine behind the world's most resilient enterprises, merging technical precision with human-centric design.
-                </p>
-<div class="flex flex-wrap justify-center gap-md pt-lg">
-<div class="glass-card px-lg py-md rounded-executive flex items-center gap-sm">
-<span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
-<span class="font-label-md">30+ Years Excellence</span>
+<section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="About Us Hero">
+<div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
-<div class="glass-card px-lg py-md rounded-executive flex items-center gap-sm">
-<span class="material-symbols-outlined text-brand-red" data-icon="shield_with_heart">shield_with_heart</span>
-<span class="font-label-md">Global Trusted Partner</span>
+<div class="relative z-10 text-white">
+<h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">About Us</h1>
+<p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> About Us</p>
+</div>
+<div class="wave-divider">
+<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
+</div>
+</section>
+<!-- Our Legacy Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-white">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="inline-block p-1 mb-6 rounded-xl bg-gradient-to-r from-primary to-secondary">
+<div class="bg-white px-4 py-1 rounded-lg text-primary font-bold text-label-sm">SINCE 1991</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Our Legacy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        We, Zigma Software Consultancy, are a professional Organization comprising a set of dedicated software professionals around 10 plus, ever striving towards perfection from 1991 onwards. Doing Tailor-made software projects for large &amp; medium Manufacturing entities, trading houses, various product Exporters, Corporate administrative offices, Professionals and Chartered Accountants etc., like Financial Accounting Systems, Payroll Management Systems, Schedule Management Systems, Equipment History Management Systems, Textile Design Management Systems, Marketing Management Systems, Ticket Booking (Travels) Systems, Bus Collection Maintenance Systems etc.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-8">
+<span class="bg-primary-fixed text-on-primary-fixed px-4 py-2 rounded-full text-label-sm font-bold">10+ Professionals</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-2 rounded-full text-label-sm font-bold">Tailor-made Systems</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full text-label-sm font-bold">30+ Years Experience</span>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img alt="A professional and modern software engineering team working together in a bright, clean office space." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBZaUPp3iVPa21WlmtDUV69rV88wKqJzEQqsnKwegr60x_WpCBmLYZOZ_d_gSbDXe7AX0nBAfLOXC7BdeDUGKo1DdWGyXe-2_bA0CzenFxS0h1D7oP3kr7ynuaEDiG7VUiAPLJ6yPVjRkeGU6ZuXp_up7Qp6oUR8gpAt2NOsBPPGQiBFiENo8ntzuThhTVL3d-lDYSwtAbqyzjZ4_fCaZZo4BgF3RehHivQB5g6gcm_4r9_c-tcn84UP0Nr0X-N8jCunZ7GZ3ajg">
+</div>
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Founders & Methodology -->
+<!-- Our Driving Force (Mission, Vision, Values Bento) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-primary">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-white">Our Driving Force</h2>
+<p class="text-white/90">The pillars that define our commitment to excellence.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Core Values Card (Peach Accent) -->
+<div class="p-8 rounded-[40px] bg-[#fff5f2] border-[#ffdad7] flex flex-col group transition-all duration-300 hover:bg-[#ffeadb] hover:scale-[1.02] shadow-sm hover:shadow-xl">
+<div class="w-16 h-16 rounded-2xl bg-[#ffdad7] flex items-center justify-center mb-8 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-secondary text-3xl">hub</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Our Core Values</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            At Zigma Software, Erode, we provide end-to-end digital solutions designed to strengthen your brand and accelerate business growth through innovative and skilled expertise.
+                        </p>
+<div class="mt-auto flex flex-col gap-3">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+<span class="font-label-sm">Precision Engineering</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+<span class="font-label-sm">Collaborative Innovation</span>
+</div>
+</div>
+</div>
+<!-- Vision Card (Sky Blue Accent) -->
+<div class="p-8 rounded-[40px] bg-[#f0f7ff] border-[#d3e4ff] flex flex-col group transition-all duration-300 hover:bg-[#e0f0ff] hover:scale-[1.02] shadow-sm hover:shadow-xl">
+<div class="w-20 h-20 mb-8 relative flex items-center justify-center"><div class="absolute inset-0 bg-primary opacity-20 rounded-full blur-xl group-hover:opacity-40 transition-opacity"></div><div class="relative w-16 h-16 flex items-center justify-center bg-primary text-white rounded-[60%_40%_30%_70%/60%_30%_70%_40%] transition-transform duration-500 group-hover:-rotate-12"><span class="material-symbols-outlined text-3xl">visibility</span></div></div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Our Vision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Create simple technocrat software that serves as a dedicated digital assistant for any average person to manage their business and personal accounts with precision and ease.
+                        </p>
+<div class="mt-12 opacity-50">
+</div>
+</div>
+<!-- Mission Card (Lavender Accent) -->
+<div class="p-8 rounded-[40px] bg-[#f5f3ff] border-[#e2e2e5] flex flex-col group transition-all duration-300 hover:bg-[#ede9fe] hover:scale-[1.02] shadow-sm hover:shadow-xl">
+<div class="w-20 h-20 mb-8 relative flex items-center justify-center"><div class="absolute inset-0 bg-tertiary opacity-20 rounded-full blur-xl group-hover:opacity-40 transition-opacity"></div><div class="relative w-16 h-16 flex items-center justify-center bg-tertiary text-white rounded-[50%_50%_20%_80%/50%_20%_80%_50%] transition-transform duration-500 group-hover:scale-110"><span class="material-symbols-outlined text-3xl">rocket_launch</span></div></div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Our Mission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+                            Consistent commitment towards enhancing the business growth of our customers through innovative technologies and ideas in delivering credible best-in-class business solutions.
+                        </p>
+<button class="shimmer-btn mt-auto w-full py-4 bg-primary text-white font-bold rounded-2xl transition-all hover:bg-secondary active:scale-[0.98]">
+                            Join Our Journey
+                        </button>
 </div>
 </div>
 </div>
 </section>
-<!-- Who We Are -->
-<section class="py-xxl max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
-<div class="space-y-lg">
-<span class="text-brand-blue font-label-sm tracking-[0.2em] uppercase">Who We Are</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Legacy of Innovation, <br/>Future of Possibility</h2>
-<div class="font-body-md text-on-surface-variant space-y-md">
-<p>Zigma Software began in a small laboratory with a single vision: to create business software that doesn't just manage data, but inspires growth. For over three decades, we have remained at the cutting edge of technological evolution.</p>
-<p>Our methodology combines rigorous analytical data structures with a fluid, intuitive user experience. We believe that professional software should be as delightful to use as it is powerful to deploy.</p>
-</div>
-<div class="flex flex-wrap gap-sm">
-<span class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-sm">Scalability</span>
-<span class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-sm">Reliability</span>
-<span class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-sm">Human-Centric</span>
-</div>
-</div>
-<div class="relative">
-<div class="glass-card rounded-executive p-md aspect-square flex items-center justify-center">
-<img class="w-full h-full object-cover rounded-[12px] brightness-90 contrast-110" data-alt="A high-end architectural shot of a modern glass and steel office building during blue hour. The lighting is cold and professional with glowing blue interior lights. The composition is dynamic and diagonal, reflecting a sense of progress and stability. Minimalist tech aesthetic with deep navy shadows and bright highlights." src="assets/images/hero_command_center.png"/>
-</div>
-<div class="absolute -bottom-8 -left-8 glass-card p-lg rounded-executive shadow-2xl border-primary/30 hidden md:block">
-<div class="text-primary font-display-lg text-headline-lg">1991</div>
-<div class="font-label-md text-on-surface-variant">Established Foundation</div>
-</div>
-</div>
-</section>
-<!-- Our Journey -->
-<section class="py-xxl bg-surface-container-lowest relative">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<h2 class="font-headline-lg text-headline-lg">Our Journey</h2>
-<p class="text-on-surface-variant mt-sm">A timeline of disruptive breakthroughs</p>
-</div>
-<div class="relative">
-<!-- Vertical Line -->
-<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px timeline-line opacity-20 hidden md:block"></div>
-<div class="space-y-xxl">
-<!-- Step 1 -->
-<div class="flex flex-col md:flex-row items-center gap-xl relative">
-<div class="w-full md:w-1/2 text-right hidden md:block">
-<h3 class="font-headline-md text-primary">The Genesis</h3>
-<p class="text-on-surface-variant">Founded Zigma in Erode, pioneering custom corporate accounting logic.</p>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-4 border-primary flex items-center justify-center">
-<div class="w-2 h-2 rounded-full bg-primary animate-ping"></div>
-</div>
-<div class="w-full md:w-1/2 glass-card p-lg rounded-executive">
-<span class="text-primary font-bold">1991</span>
-<h3 class="font-headline-md block md:hidden">The Genesis</h3>
-<p class="text-on-surface-variant md:hidden">Founded Zigma in Erode, pioneering custom corporate accounting logic.</p>
-<p class="hidden md:block">Pioneering the industry with cloud-adjacent architectures before the "Cloud" was a household term.</p>
-</div>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-xl relative">
-<div class="w-full md:w-1/2 text-left hidden md:block">
-<h3 class="font-headline-md text-brand-red">Global Pivot</h3>
-<p class="text-on-surface-variant">Expanded to multi-state operations and reached hundreds of active enterprise clients.</p>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-4 border-brand-red flex items-center justify-center">
-<div class="w-2 h-2 rounded-full bg-brand-red"></div>
-</div>
-<div class="w-full md:w-1/2 glass-card p-lg rounded-executive">
-<span class="text-brand-red font-bold">2005</span>
-<h3 class="font-headline-md block md:hidden">Global Pivot</h3>
-<p class="text-on-surface-variant md:hidden">Expanded to multi-state operations and reached hundreds of active enterprise clients.</p>
-<p class="hidden md:block">Redefining enterprise scale by launching custom Stores and Billing modules for high-speed local logistics.</p>
-</div>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col md:flex-row items-center gap-xl relative">
-<div class="w-full md:w-1/2 text-right hidden md:block">
-<h3 class="font-headline-md text-primary">The AI Era</h3>
-<p class="text-on-surface-variant">Integration of Predictive Intelligence across the entire Zigma ERP stack.</p>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-4 border-primary flex items-center justify-center">
-<div class="w-2 h-2 rounded-full bg-primary"></div>
-</div>
-<div class="w-full md:w-1/2 glass-card p-lg rounded-executive">
-<span class="text-primary font-bold">2024</span>
-<h3 class="font-headline-md block md:hidden">The AI Era</h3>
-<p class="text-on-surface-variant md:hidden">Integration of Predictive Intelligence across the entire Zigma ERP stack.</p>
-<p class="hidden md:block">Unveiling our custom web-based cloud core, ensuring Zigma clients are prepared for the digital future.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- The Visionary Spirit -->
-<section class="py-xxl max-w-container-max mx-auto px-gutter overflow-hidden">
-<div class="flex flex-col lg:flex-row gap-xxl items-center">
-<div class="w-full lg:w-1/2 relative">
-<div class="absolute -top-10 -left-10 w-full h-full border-2 border-primary/20 rounded-executive"></div>
-<img class="w-full rounded-executive shadow-2xl relative z-10" data-alt="A professional, high-fidelity black and white portrait of a confident tech executive. The lighting is cinematic, highlighting sharp features and a visionary gaze. The background is a soft-focus laboratory or high-tech office with glowing monitors. Minimalist, premium, and authoritative atmosphere with high contrast." src="assets/images/hero_command_center.png"/>
-</div>
-<div class="w-full lg:w-1/2 space-y-lg">
-<span class="text-brand-red font-label-sm tracking-[0.2em] uppercase">Leadership</span>
-<h2 class="font-display-lg text-headline-lg leading-tight">Visionary Spirit, <br/>Expert Execution</h2>
-<p class="font-body-lg text-on-surface-variant">"At Zigma, we don't just build tools. We build the infrastructure for our client's most ambitious dreams."</p>
-<div class="grid grid-cols-2 gap-md">
-<div class="glass-card p-md rounded-executive border-l-4 border-l-primary">
-<div class="font-headline-md text-primary">500+</div>
-<div class="font-label-sm text-on-surface-variant">Design Awards</div>
-</div>
-<div class="glass-card p-md rounded-executive border-l-4 border-l-brand-red">
-<div class="font-headline-md text-brand-red">99.9%</div>
-<div class="font-label-sm text-on-surface-variant">Uptime SLA</div>
-</div>
-</div>
-<a href="contact.html" class="flex items-center gap-sm text-primary font-label-md group">
-                        Meet our executive board
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Mission & Values -->
-<section class="py-xxl bg-gradient-to-b from-surface to-surface-container">
-<div class="max-w-container-max mx-auto px-gutter text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg">Our Core Mission</h2>
-<p class="text-on-surface-variant">The principles that guide every line of code we write.</p>
-</div>
-<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-lg">
-<div class="glass-card p-xl rounded-executive text-center hover:shadow-[0_0_30px_rgba(156,202,255,0.15)] transition-all group">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-lg group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="rocket_launch" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
-</div>
-<h3 class="font-headline-md mb-md">Relentless Innovation</h3>
-<p class="text-on-surface-variant font-body-md">We challenge the status quo daily, pushing the boundaries of what enterprise software can achieve.</p>
-</div>
-<div class="glass-card p-xl rounded-executive text-center hover:shadow-[0_0_30px_rgba(236,63,67,0.15)] transition-all group">
-<div class="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center mx-auto mb-lg group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl text-brand-red" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-</div>
-<h3 class="font-headline-md mb-md">Unyielding Integrity</h3>
-<p class="text-on-surface-variant font-body-md">Security and privacy aren't features; they are the foundation upon which Zigma was built.</p>
-</div>
-<div class="glass-card p-xl rounded-executive text-center hover:shadow-[0_0_30px_rgba(156,202,255,0.15)] transition-all group">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-lg group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="diversity_3" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
-</div>
-<h3 class="font-headline-md mb-md">Customer Success</h3>
-<p class="text-on-surface-variant font-body-md">We measure our success by the scale of the impact our partners create in their respective fields.</p>
-</div>
-</div>
-</section>
-<!-- Achievements Stats -->
-<section class="py-xxl bg-[#001d35] relative overflow-hidden">
-<div class="absolute inset-0 noise-overlay opacity-5"></div>
-<div class="max-w-container-max mx-auto px-gutter relative z-10">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-xl">
-<div class="text-center">
-<div class="text-display-lg font-display-lg text-primary leading-none mb-xs">33+</div>
-<div class="text-on-surface-variant font-label-md tracking-widest uppercase">Years in Business</div>
-</div>
-<div class="text-center">
-<div class="text-display-lg font-display-lg text-primary leading-none mb-xs">900+</div>
-<div class="text-on-surface-variant font-label-md tracking-widest uppercase">Active Clients</div>
-</div>
-<div class="text-center">
-<div class="text-display-lg font-display-lg text-primary leading-none mb-xs">15+</div>
-<div class="text-on-surface-variant font-label-md tracking-widest uppercase">Years of Team Exp</div>
-</div>
-<div class="text-center">
-<div class="text-display-lg font-display-lg text-primary leading-none mb-xs">100%</div>
-<div class="text-on-surface-variant font-label-md tracking-widest uppercase">Reliable Support</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Industries We Serve -->
-<section class="py-xxl max-w-container-max mx-auto px-gutter">
-<div class="mb-xxl flex flex-col md:flex-row justify-between items-end gap-md">
-<div>
-<h2 class="font-headline-lg text-headline-lg">Global Sectors</h2>
-<p class="text-on-surface-variant">Customized solutions for specialized industries.</p>
-</div>
-<a class="text-primary font-label-md underline underline-offset-8" href="customer.html">View all industry playbooks</a>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
-<a href="customer.html" class="glass-card p-lg rounded-executive group hover:bg-surface-variant/30 transition-all cursor-pointer block">
-<span class="material-symbols-outlined text-3xl text-primary mb-md block" data-icon="account_balance">account_balance</span>
-<h4 class="font-label-md text-on-surface mb-sm">FinTech</h4>
-<p class="text-xs text-on-surface-variant">Ultra-secure ledger systems.</p>
-</a>
-<a href="customer.html" class="glass-card p-lg rounded-executive group hover:bg-surface-variant/30 transition-all cursor-pointer block">
-<span class="material-symbols-outlined text-3xl text-primary mb-md block" data-icon="medical_services">medical_services</span>
-<h4 class="font-label-md text-on-surface mb-sm">HealthCare</h4>
-<p class="text-xs text-on-surface-variant">HIPAA compliant tools.</p>
-</a>
-<a href="customer.html" class="glass-card p-lg rounded-executive group hover:bg-surface-variant/30 transition-all cursor-pointer block">
-<span class="material-symbols-outlined text-3xl text-primary mb-md block" data-icon="factory">factory</span>
-<h4 class="font-label-md text-on-surface mb-sm">Manufacturing</h4>
-<p class="text-xs text-on-surface-variant">Smart supply chain tracking.</p>
-</a>
-<a href="customer.html" class="glass-card p-lg rounded-executive group hover:bg-surface-variant/30 transition-all cursor-pointer block">
-<span class="material-symbols-outlined text-3xl text-primary mb-md block" data-icon="shopping_cart">shopping_cart</span>
-<h4 class="font-label-md text-on-surface mb-sm">Retail</h4>
-<p class="text-xs text-on-surface-variant">Omnichannel experience management.</p>
-</a>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-xxl px-gutter">
-<div class="max-w-container-max mx-auto bg-gradient-to-r from-primary-container to-brand-blue rounded-[32px] p-xxl text-center relative overflow-hidden group">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-<div class="relative z-10 max-w-2xl mx-auto space-y-md">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white">Ready to elevate your infrastructure?</h2>
-<p class="text-on-primary-container/80 font-body-lg">Join the world's leading companies who trust Zigma for their mission-critical operations.</p>
-<div class="pt-lg flex flex-col sm:flex-row justify-center gap-md">
-<a href="contact.html" class="bg-white text-brand-blue font-label-md px-xxl py-md rounded-full shadow-xl hover:scale-105 transition-transform flex items-center justify-center">Get Started Today</a>
-<a href="contact.html" class="bg-brand-red text-white font-label-md px-xxl py-md rounded-full shadow-xl hover:scale-105 transition-transform flex items-center justify-center">Schedule a Demo</a>
-</div>
-</div>
-</div>
-</section>
+
+</main>
 </main>
 <!-- Footer -->
-<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-on-primary dark:text-on-surface w-full rounded-t-xl border-t-4 border-primary mt-xxl">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl py-xl max-w-7xl mx-auto">
-<div class="space-y-md">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-[32px]">terminal</span>
-<span class="font-headline-md text-headline-md font-bold text-on-primary">Zigma Software</span>
-</div>
-<p class="text-surface-variant/80 font-body-md leading-relaxed">Defining the next era of enterprise software with luxury digital craftsmanship and precision engineering.</p>
-<div class="flex gap-md">
-<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">groups</span></a>
-<a class="text-surface-variant/80 hover:text-secondary-fixed transition-all" href="#"><span class="material-symbols-outlined">hub</span></a>
+<footer class="bg-[#001e2d] pt-20 pb-8 text-on-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="space-y-8">
+<a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
+<p class="text-surface-variant/70 text-lg leading-relaxed font-medium">
+                Zigma Software, Erode is a trusted digital solutions company delivering web, mobile app, and software solutions to grow your business.
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
 </div>
 </div>
 <div>
-<h5 class="font-bold mb-lg">Services</h5>
-<ul class="space-y-sm font-body-md text-surface-variant/80">
-<li><a class="hover:text-white transition-colors" href="web-development.html">Web Design & Development</a></li>
-<li><a class="hover:text-white transition-colors" href="mobile-development.html">Mobile App Development</a></li>
-<li><a class="hover:text-white transition-colors" href="seo-services.html">SEO Services</a></li>
-<li><a class="hover:text-white transition-colors" href="social-marketing.html">Social Media Marketing</a></li>
-<li><a class="hover:text-white transition-colors" href="software-support.html">Software Support</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Get In Touch</h4>
+<ul class="space-y-6 text-surface-variant/80 font-medium">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+<span class="">Door No: 4/1c.12-A, Annamalai Gounder Layout, 1st Floor, Near Hotel Vignesh, Mettur Road, Erode. Tamil Nadu, India</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">phone</span>
+<span class="">+91-9942364454, 9791902386</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+<span class="">info@zigmasoftware.in</span>
+</li>
 </ul>
 </div>
 <div>
-<h5 class="font-bold mb-lg">Company</h5>
-<ul class="space-y-sm font-body-md text-surface-variant/80">
-<li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
-<li><a class="hover:text-white transition-colors" href="customer.html">Our Customers</a></li>
-<li><a class="hover:text-white transition-colors" href="testimonials.html">Testimonials</a></li>
-<li><a class="hover:text-white transition-colors" href="blog.html">Blogs</a></li>
-<li><a class="hover:text-white transition-colors" href="contact.html">Contact Us</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Important Links</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="about.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> About Us</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="products.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Products</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Services</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="blog.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Blogs</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="contact.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Contact Us</a></li>
 </ul>
 </div>
 <div>
-<h5 class="font-bold mb-lg">Get In Touch</h5>
-<p class="text-surface-variant/80 text-sm mb-md">Door No: 4/1c,12-A, Annamalai Gounder Layout, Near Hotel Vignesh, Mettur Road, Erode - 638011, Tamil Nadu, India.</p>
-<p class="text-surface-variant/80 text-sm mb-xs">Email: info@zigmasoftware.in</p>
-<p class="text-surface-variant/80 text-sm mb-xs">Phone: +91 99941 40474</p>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Our Services</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
+<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
+</ul>
 </div>
 </div>
-<div class="max-w-7xl mx-auto px-xl py-lg border-t border-outline-variant/10 text-center text-surface-variant/60 font-label-sm text-label-sm">
-            © 2024 Zigma Software. All rights reserved. Precision Software for the Global Elite.
-        </div>
+<div class="border-t border-white/5 pt-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-surface-variant/50 text-sm font-medium">
+<p class="">© 2024 Zigma Software. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
 </footer>
 <script>
-        // Mobile menu toggle logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
+    // Mobile menu toggle logic
+    // Mobile menu toggle and active path highlight logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+ 
+        if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
 
-            if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.remove('hidden');
-                });
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
+        // Active page detection and highlight
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const servicePaths = [
+            'web-development.html',
+            'mobile-development.html',
+            'seo-services.html',
+            /* social-marketing removed */
+            'software-support.html'
+        ];
+
+        // 1. Highlight Desktop Nav Items
+        const desktopLinks = document.querySelectorAll('#main-nav a, #main-nav button');
+        desktopLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
+                }
+            } else {
+                // Services dropdown parent button
+                if (link.textContent.trim().toLowerCase().includes('services') && servicePaths.includes(currentPath)) {
+                    isActive = true;
+                }
+            }
+
+            if (isActive) {
+                link.classList.remove('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
+                link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+            } else {
+                link.classList.remove('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                link.classList.add('bg-transparent', 'text-[#00497b]', 'hover:text-[#EC3F43]');
             }
         });
 
-        // Micro-interactions and hover effects
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            // Subtle parallax for background elements
-            const floating = document.querySelectorAll('.floating');
-            floating.forEach((el, index) => {
-                const speed = (index + 1) * 20;
-                el.style.transform = `translate(${(mouseX - 0.5) * speed}px, ${(mouseY - 0.5) * speed}px)`;
-            });
-        });
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+        // 2. Highlight Mobile Nav Items
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            let isActive = false;
+            const href = link.getAttribute('href');
+            if (href) {
+                const linkPath = href.split('/').pop();
+                if (linkPath === currentPath) {
+                    isActive = true;
+                } else if ((currentPath === '' || currentPath === '/') && linkPath === 'index.html') {
+                    isActive = true;
                 }
-            });
-        }, { threshold: 0.1 });
+            }
 
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(card);
+            if (isActive) {
+                if (link.classList.contains('rounded-full')) {
+                    // Mobile Contact button when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'hover:brightness-110');
+                } else {
+                    // Other mobile items when active
+                    link.classList.add('bg-[#EC3F43]', 'text-white', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.remove('hover:text-secondary');
+                }
+            } else {
+                if (link.classList.contains('rounded-full') && href && href.endsWith('contact.html')) {
+                    // Mobile Contact button when inactive (bordered layout)
+                    link.classList.remove('bg-[#EC3F43]', 'hover:brightness-110');
+                    link.classList.add('border', 'border-white/20', 'text-white', 'hover:bg-white/10');
+                } else {
+                    // Other mobile items when inactive
+                    link.classList.remove('bg-[#EC3F43]', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
+                    link.classList.add('hover:text-secondary');
+                }
+            }
         });
-    </script>
+    });
+
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
 </body></html>
