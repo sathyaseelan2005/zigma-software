@@ -70,3 +70,17 @@ body {
   font-size: 14px;
   color: var(--on-surface-variant);
 }
+
+/* Explicit section label/title sizing to ensure consistent visual order */
+.section-label {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  display: block;
+}
+.section-title {
+  font-size: 2.5rem; /* ~40px */
+}
+.section-title-lg {
+  font-size: 3rem; /* ~48px for large screens */
+}
