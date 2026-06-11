@@ -84,3 +84,16 @@ body {
 .section-title-lg {
   font-size: 3rem; /* ~48px for large screens */
 }
+
+/* Partner logos grid */
+.partners-grid .partner-card {
+  border: 1px dashed #e6edf2;
+  border-radius: 8px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: var(--primary);
+  font-weight: 600;
+}
