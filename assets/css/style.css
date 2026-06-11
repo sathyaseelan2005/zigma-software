@@ -33,3 +33,14 @@ body {
 #main-nav .nav-links button {
   white-space: nowrap;
 }
+
+/* Crop logo in header to remove unwanted bottom artifact */
+#main-nav .logo-crop {
+  height: 48px; /* slightly smaller than the image height to hide the bottom line */
+  overflow: hidden;
+  display: inline-block;
+}
+#main-nav .logo-crop img {
+  display: block;
+  transform: translateY(-3px);
+}
