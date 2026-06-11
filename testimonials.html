@@ -3,6 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Testimonials | Zigma Software</title>
 <script src="assets/js/tailwind.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -100,15 +101,31 @@
                                 "card": "20px"
                         },
                         "spacing": {
-                                "base": "8px",
-                                "container-margin-desktop": "40px",
-                                "container-margin-mobile": "16px",
-                                "gutter": "16px",
-                                "lg": "24px",
-                                "md": "16px",
-                                "sm": "12px",
-                                "xl": "32px",
-                                "xs": "4px"
+
+                          "gutter": "24px",
+
+                          "margin-desktop": "64px",
+
+                          "margin-mobile": "16px",
+
+                          "base": "8px",
+
+                          "container-max": "1280px",
+
+                          "container-margin-desktop": "40px",
+
+                          "container-margin-mobile": "16px",
+
+                          "xs": "4px",
+
+                          "sm": "12px",
+
+                          "md": "16px",
+
+                          "lg": "24px",
+
+                          "xl": "32px"
+
                         },
                         "fontFamily": {
                                 "poppins": [
@@ -231,7 +248,7 @@
 <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
 <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<div class="hidden lg:flex nav-links items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
@@ -246,7 +263,7 @@
     <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
     <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
     <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Social Media Marketing</a>
     <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
@@ -274,7 +291,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+      <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -285,18 +302,12 @@
 <!-- 3. Hero Banner -->
 <section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A sophisticated modern office interior with glass walls and professional software developers collaborating in the background. The scene is bathed in a cool, tech-focused blue gradient overlay, emphasizing a high-performance corporate atmosphere with subtle depth and cinematic lighting." src="assets/images/hero_command_center.png">
+<img class="w-full h-full object-cover" src="assets/images/tech_banner_bg.png" alt="Testimonials Hero">
 <div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
 <div class="relative z-10 text-white">
 <h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Testimonials</h1>
 <p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Testimonials</p>
-</div>
-<!-- Modern Wave Divider -->
-<div class="wave-divider">
-<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-</svg>
 </div>
 </section>
 <!-- 4. Testimonials Section -->
@@ -313,7 +324,7 @@
 <div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
 <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
 <div>
-<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg testimonial-avatar">
 <span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
 </div>
 <p class="text-on-surface-variant italic mb-xl relative z-10">
@@ -333,12 +344,19 @@
 <div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
 <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
 <div>
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-lg testimonial-avatar">
 <span class="material-symbols-outlined text-primary" data-icon="format_quote" data-weight="fill">format_quote</span>
 </div>
 <p class="text-on-surface-variant italic mb-xl relative z-10">
                             "The team at Zigma provided not just code, but genuine strategic insight. Their UI/UX redesign increased our user engagement metrics by over 45% in the first quarter alone."
                         </p>
+</div>
+<div class="flex items-center gap-md">
+
+<div>
+<h4 class="font-headline-md text-title-lg text-primary" style="font-family: Poppins, sans-serif;">Sarah Jenkins</h4>
+<p class="text-[11px] font-bold text-outline tracking-wider uppercase">VP of Product, RetailFlow</p>
+</div>
 </div>
 
 <span class="material-symbols-outlined absolute bottom-4 right-4 text-surface-container-highest text-[80px] opacity-20 pointer-events-none" data-icon="format_quote">format_quote</span>
@@ -347,7 +365,7 @@
 <div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
 <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
 <div>
-<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg testimonial-avatar">
 <span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
 </div>
 <p class="text-on-surface-variant italic mb-xl relative z-10">
@@ -367,7 +385,7 @@
 <div class="fade-up md:col-span-2 bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col md:flex-row gap-lg justify-between items-center overflow-hidden visible">
 <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
 <div class="flex-1">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-md">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-md testimonial-avatar">
 <span class="material-symbols-outlined text-primary" data-icon="format_quote" data-weight="fill">format_quote</span>
 </div>
 <p class="text-on-surface-variant italic text-lg leading-relaxed relative z-10">
@@ -385,7 +403,7 @@
 <div class="fade-up bg-white rounded-card border border-outline-variant p-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group flex flex-col justify-between h-full overflow-hidden visible">
 <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary group-hover:w-2 transition-all"></div>
 <div>
-<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-lg testimonial-avatar">
 <span class="material-symbols-outlined text-secondary" data-icon="format_quote" data-weight="fill">format_quote</span>
 </div>
 <p class="text-on-surface-variant italic mb-xl relative z-10">
@@ -457,7 +475,7 @@
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
-<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
 </ul>
 </div>
@@ -558,6 +576,37 @@
                     // Other mobile items when inactive
                     link.classList.remove('bg-[#EC3F43]', 'px-6', 'py-2', 'rounded-full', 'hover:brightness-110');
                     link.classList.add('hover:text-secondary');
+                }
+            }
+        });
+
+        // Dynamic Testimonial Initials Generation
+        const testimonialCards = document.querySelectorAll('.rounded-card');
+        testimonialCards.forEach(card => {
+            const avatarCircle = card.querySelector('.testimonial-avatar');
+            const nameHeader = card.querySelector('h4');
+            if (avatarCircle && nameHeader) {
+                const name = nameHeader.textContent.trim();
+                const nameParts = name.split(/\s+/).filter(Boolean);
+                let initials = "";
+                if (nameParts.length > 0) {
+                    const firstInitial = nameParts[0][0];
+                    const lastInitial = nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : "";
+                    initials = (firstInitial + lastInitial).toUpperCase();
+                }
+                if (initials) {
+                    // Find color class from current quote icon to maintain color harmony
+                    const quoteIcon = avatarCircle.querySelector('.material-symbols-outlined');
+                    let colorClass = 'text-primary';
+                    if (quoteIcon) {
+                        if (quoteIcon.classList.contains('text-secondary')) {
+                            colorClass = 'text-secondary';
+                        } else if (quoteIcon.classList.contains('text-primary')) {
+                            colorClass = 'text-primary';
+                        }
+                    }
+                    // Replace quote icon with initials, maintaining alignment and typography styling
+                    avatarCircle.innerHTML = `<span class="font-poppins font-bold text-lg tracking-wider ${colorClass}">${initials}</span>`;
                 }
             }
         });

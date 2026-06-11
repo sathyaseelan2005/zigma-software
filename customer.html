@@ -6,6 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Our Customers | Zigma Software</title>
 <script src="assets/js/tailwind.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
@@ -294,7 +295,7 @@
 <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
 <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+<div class="hidden lg:flex nav-links items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
@@ -309,7 +310,7 @@
     <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
     <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
     <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Social Media Marketing</a>
     <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
@@ -337,7 +338,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+      <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -352,23 +353,18 @@
 <!-- Hero Banner -->
 <section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="Our Customers Hero">
+<img class="w-full h-full object-cover" src="assets/images/tech_banner_bg.png" alt="Our Customers Hero">
 <div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
 <div class="relative z-10 text-white">
 <h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Our Customers</h1>
 <p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Customers</p>
 </div>
-<div class="wave-divider">
-<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-</svg>
-</div>
 </section>
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
 <div class="max-w-container-max mx-auto">
 <!-- Industry Grid -->
-<div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 overflow-x-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 <script>
                     const industries = [
                         { name: "Advertisement Agencies", icon: "campaign" },
@@ -392,9 +388,9 @@
                         { name: "Department Stores", icon: "storefront" },
                         { name: "Doctors", icon: "medical_services" },
                         { name: "Educational Institutions", icon: "school" },
-                        { name: "Electrical/Pipes / Motors", icon: "bolt" },
+                        { name: "Electrical / Pipes / Motors", icon: "bolt" },
                         { name: "Electronic Services / Spares", icon: "developer_board" },
-                        { name: "Engineering Stores/Tools", icon: "build" },
+                        { name: "Engineering Stores / Tools", icon: "build" },
                         { name: "Financiers General", icon: "account_balance" },
                         { name: "Financiers Higher Purchase", icon: "payments" },
                         { name: "Food Industries / Contractors", icon: "restaurant" },
@@ -410,17 +406,15 @@
                         { name: "Medical Shop", icon: "local_pharmacy" },
                         { name: "Medical Surgicals", icon: "content_cut" },
                         { name: "Oil Agencies", icon: "oil_barrel" },
-                        { name: "Paints/Hardwares/Cements", icon: "format_paint" }
+                        { name: "Paints / Hardwares / Cements", icon: "format_paint" }
                     ];
 
                     document.write(industries.map(ind => `
-                        <div class="customer-card group bg-white border border-outline-variant h-[90px] rounded-[20px] p-md flex items-center cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(6,112,183,0.15)] hover:border-primary">
-                            <div class="flex items-center gap-md">
-                                <div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
-                                    <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size: 24px;">${ind.icon}</span>
-                                </div>
-                                <span class="font-poppins text-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">${ind.name}</span>
+                        <div class="customer-card group bg-white border border-outline-variant h-[90px] rounded-[20px] p-md flex items-center gap-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(6,112,183,0.15)] hover:border-primary">
+                            <div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
+                                <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" style="font-size: 24px;">${ind.icon}</span>
                             </div>
+                            <span class="font-poppins text-sm md:text-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight min-w-0 break-words">${ind.name}</span>
                         </div>
                     `).join(''));
                 </script>
@@ -498,7 +492,7 @@
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
-<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
 </ul>
 </div>

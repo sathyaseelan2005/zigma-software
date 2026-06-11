@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Web Design &amp; Development | Zigma Software</title>
 <script src="assets/js/tailwind.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
@@ -119,16 +120,32 @@
                     "20px": "20px"
             },
             "spacing": {
-                      "base": "8px",
-                      "container-margin-desktop": "40px",
-                      "container-margin-mobile": "16px",
-                      "gutter": "16px",
-                      "lg": "24px",
-                      "md": "16px",
-                      "sm": "12px",
-                      "xl": "32px",
-                      "xs": "4px"
-              },
+
+              "gutter": "24px",
+
+              "margin-desktop": "64px",
+
+              "margin-mobile": "16px",
+
+              "base": "8px",
+
+              "container-max": "1280px",
+
+              "container-margin-desktop": "40px",
+
+              "container-margin-mobile": "16px",
+
+              "xs": "4px",
+
+              "sm": "12px",
+
+              "md": "16px",
+
+              "lg": "24px",
+
+              "xl": "32px"
+
+            },
             "fontFamily": {
                     "headline-lg": ["Hanken Grotesk"],
                     "title-lg": ["Hanken Grotesk"],
@@ -175,7 +192,7 @@
 <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
 <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+    <div class="hidden lg:flex nav-links items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
@@ -190,7 +207,8 @@
     <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
     <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
     <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Social Media Marketing</a>
+          <!-- Product Development removed -->
     <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
@@ -213,12 +231,13 @@
 <a class="hover:text-secondary transition-colors" href="index.html">Home</a>
 <a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
 <a class="hover:text-secondary transition-colors" href="products.html">Products</a>
-<div class="flex flex-col items-center gap-sm">
+    <div class="flex flex-col items-center gap-sm">
   <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+      <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+    <!-- Product Development removed -->
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -229,17 +248,12 @@
 <!-- Hero Banner -->
 <section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" src="assets/images/hero_command_center.png" alt="Web Development Hero">
+<img class="w-full h-full object-cover" src="assets/images/tech_banner_bg.png" alt="Web Development Hero">
 <div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
 </div>
 <div class="relative z-10 text-white">
 <h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Web Design &amp; Development</h1>
 <p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Services <span class="mx-xs">&gt;</span> Web Development</p>
-</div>
-<div class="wave-divider">
-<svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-</svg>
 </div>
 </section>
 <!-- Introduction Section -->
@@ -439,64 +453,69 @@
 </section>
 <!-- Footer -->
 <footer class="bg-[#001e2d] pt-20 pb-8 text-on-tertiary">
-<div class="max-w-[1280px] mx-auto px-container-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
-<div class="flex flex-col gap-6">
-    <a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
-    <p class="font-body-md text-outline-variant/70 leading-relaxed">Precision in performance. We build the digital future for ambitious enterprises worldwide.</p>
-    <div class="flex gap-md">
-        <a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
-            <span class="material-symbols-outlined text-[20px]">share</span>
-        </a>
-        <a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
-            <span class="material-symbols-outlined text-[20px]">public</span>
-        </a>
-        <a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-secondary transition-all" href="#">
-            <span class="material-symbols-outlined text-[20px]">hub</span>
-        </a>
-    </div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="space-y-8">
+<a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
+<p class="text-surface-variant/70 text-lg leading-relaxed font-medium">
+                Zigma Software, Erode is a trusted digital solutions company delivering web, mobile app, and software solutions to grow your business.
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</div>
 </div>
 <div>
-<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block">
-                    Services
-                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
-</h4>
-<ul class="space-y-sm text-outline-variant">
-<li><a class="hover:text-white transition-colors" href="web-development.html">Web Development</a></li>
-<li><a class="hover:text-white transition-colors" href="mobile-development.html">Mobile Apps</a></li>
-<li><a class="hover:text-white transition-colors" href="seo-services.html">SEO Services</a></li>
-<!-- Footer link to Social Marketing removed -->
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Get In Touch</h4>
+<ul class="space-y-6 text-surface-variant/80 font-medium">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+<span class="">Door No: 4/1c.12-A, Annamalai Gounder Layout, 1st Floor, Near Hotel Vignesh, Mettur Road, Erode. Tamil Nadu, India</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">phone</span>
+<span class="">+91-9942364454, 9791902386</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+<span class="">info@zigmasoftware.in</span>
+</li>
 </ul>
 </div>
 <div>
-<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block">
-                    Company
-                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
-</h4>
-<ul class="space-y-sm text-outline-variant">
-<li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
-<li><a class="hover:text-white transition-colors" href="customer.html">Our Portfolio</a></li>
-<li><a class="hover:text-white transition-colors" href="testimonials.html">Testimonials</a></li>
-<li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Important Links</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="about.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> About Us</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="products.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Products</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Services</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="blog.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Blogs</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="contact.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Contact Us</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-poppins font-bold text-title-lg mb-lg relative inline-block">
-                    Support
-                    <span class="absolute -bottom-1 left-0 w-8 h-1 bg-secondary"></span>
-</h4>
-<ul class="space-y-sm text-outline-variant">
-<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Cookie Policy</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Help Center</a></li>
+<h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Our Services</h4>
+<ul class="space-y-4 font-medium">
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
 </ul>
 </div>
 </div>
-<div class="relative pt-lg pb-md border-t border-white/10">
-<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-secondary"></div>
-<div class="max-w-[1280px] mx-auto px-container-margin-desktop text-center text-outline-variant text-[14px]">
-                © 2024 Zigma Software. All Rights Reserved.
-            </div>
+<div class="border-t border-white/5 pt-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-surface-variant/50 text-sm font-medium">
+<p class="">© 2024 Zigma Software. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
 </div>
 </footer>
 <script>

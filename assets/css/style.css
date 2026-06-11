@@ -22,3 +22,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Ensure main navigation links are spaced evenly */
+#main-nav .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#main-nav .nav-links a,
+#main-nav .nav-links button {
+  white-space: nowrap;
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Social Media Marketing | Zigma Software</title>
+    <script src="assets/js/tailwind.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient-overlay {
+            background: linear-gradient(135deg, rgba(0, 87, 145, 0.92) 0%, rgba(18, 28, 45, 0.85) 100%);
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #005791 0%, #b71323 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 4px 15px rgba(183, 19, 35, 0.3);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        .wave-divider .shape-fill {
+            fill: #f9f9ff;
+        }
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001d35",
+                    "background": "#f9f9ff",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-fixed": "#241a00",
+                    "primary-container": "#0670b7",
+                    "outline-variant": "#c0c7d2",
+                    "surface": "#f9f9ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#930016",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-surface-variant": "#404751",
+                    "secondary": "#b71323",
+                    "outline": "#717882",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "secondary-fixed": "#ffdad7",
+                    "on-primary-container": "#e6f0ff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "primary": "#005791",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "on-background": "#111c2d",
+                    "tertiary": "#735c00",
+                    "inverse-primary": "#9ccaff",
+                    "primary-fixed": "#d0e4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#cca72f",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary-fixed-variant": "#00497b",
+                    "surface-variant": "#d8e3fb",
+                    "on-surface": "#111c2d",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#dee8ff",
+                    "surface-tint": "#0062a1",
+                    "primary-fixed-dim": "#9ccaff",
+                    "on-tertiary-container": "#4e3d00",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-highest": "#d8e3fb",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#410005",
+                    "tertiary-fixed": "#ffe088",
+                    "surface-dim": "#cfdaf2",
+                    "secondary-container": "#db3238",
+                    "surface-container-low": "#f0f3ff",
+                    "inverse-surface": "#263143"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem",
+                    "20px": "20px"
+            },
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "base": "8px",
+              "container-max": "1280px",
+              "container-margin-desktop": "40px",
+              "container-margin-mobile": "16px",
+              "xs": "4px",
+              "sm": "12px",
+              "md": "16px",
+              "lg": "24px",
+              "xl": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Hanken Grotesk"],
+                    "title-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-inter">
+<!-- Top Contact Bar -->
+<div class="hidden md:flex bg-[#001D35] text-white h-10 px-container-margin-desktop items-center justify-between text-label-sm font-label-sm relative z-50 border-b border-white/10">
+    <div class="flex items-center gap-md">
+        <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">mail</span> info@zigmasoftware.in</span>
+    </div>
+    <div class="flex items-center gap-md">
+        <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">call</span> +91 99941 40474</span>
+    </div>
+</div>
+<!-- Navigation Header -->
+<nav class="sticky top-0 w-full z-50 bg-white shadow-md border-b border-gray-200/80 h-20 flex items-center" id="main-nav">
+    <div class="max-w-[1280px] mx-auto w-full px-container-margin-desktop flex items-center justify-between h-full">
+        <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
+            <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
+        </a>
+        <div class="hidden lg:flex nav-links items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
+            <!-- Services Dropdown container -->
+            <div class="relative group h-full flex items-center">
+                <button class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent flex items-center gap-xs focus:outline-none whitespace-nowrap">
+                    <span>Services</span>
+                    <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 font-bold">expand_more</span>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="absolute top-full left-0 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-1 text-left">
+                    <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
+                    <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
+                    <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
+                    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Social Media Marketing</a>
+                    <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
+                </div>
+            </div>
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="customer.html">Customers</a>
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="testimonials.html">Testimonials</a>
+            <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="blog.html">Blogs</a>
+            <a href="contact.html" class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap">Contact</a>
+        </div>
+        <button class="lg:hidden text-[#00497b]" id="mobile-menu-toggle">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Overlay) -->
+<div class="fixed inset-0 z-[100] bg-[#001D35]/95 hidden lg:hidden flex flex-col items-center justify-center gap-lg text-white text-title-lg font-bold" id="mobile-menu">
+    <button class="absolute top-6 right-6 text-white" id="mobile-menu-close">
+        <span class="material-symbols-outlined text-[32px]">close</span>
+    </button>
+    <a class="hover:text-secondary transition-colors" href="index.html">Home</a>
+    <a class="hover:text-secondary transition-colors" href="about.html">About Us</a>
+    <a class="hover:text-secondary transition-colors" href="products.html">Products</a>
+    <div class="flex flex-col items-center gap-sm">
+        <span class="text-white/60 text-sm uppercase tracking-wider">Services</span>
+        <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
+        <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
+        <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
+        <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
+        <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
+    </div>
+    <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
+    <a class="hover:text-secondary transition-colors" href="testimonials.html">Testimonials</a>
+    <a class="hover:text-secondary transition-colors" href="blog.html">Blogs</a>
+    <a href="contact.html" class="bg-[#EC3F43] text-white px-xl py-md rounded-full font-semibold hover:brightness-110 transition-all mt-md">Contact</a>
+</div>
+
+<main class="bg-background">
+    <!-- Hero Banner -->
+    <section class="relative h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover" src="assets/images/tech_banner_bg.png" alt="Social Media Marketing Hero">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#005791]/90 to-[#111c2d]/70"></div>
+        </div>
+        <div class="relative z-10 text-white animate-fade-in">
+            <h1 class="font-display-lg text-display-lg mb-sm text-shadow-sm">Social Media Marketing</h1>
+            <p class="font-label-md opacity-90"><a href="index.html" class="hover:underline">Home</a> <span class="mx-xs">&gt;</span> Services <span class="mx-xs">&gt;</span> Social Media Marketing</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-xl bg-background">
+        <div class="max-w-[1280px] mx-auto px-container-margin-desktop text-center">
+            <span class="text-secondary font-bold tracking-[0.2em] text-label-sm uppercase mb-base block fade-up visible">SOCIAL MEDIA MARKETING</span>
+            <h2 class="font-poppins text-on-background text-[32px] md:text-[40px] font-bold mb-lg fade-up visible delay-100">Grow Your Brand with Powerful Social Media Marketing</h2>
+            <p class="text-on-surface-variant text-body-lg max-w-[900px] mx-auto leading-relaxed fade-up visible delay-200">
+                At Zigma Software Erode, we help businesses build strong online presence, engage with their audience, and generate quality leads through result-driven social media marketing strategies. Social media platforms are powerful tools to connect with customers, increase brand awareness, and boost sales.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Grid -->
+    <section class="py-xl bg-background">
+        <div class="max-w-[1280px] mx-auto px-container-margin-desktop">
+            <h3 class="text-center font-poppins text-[28px] md:text-[36px] font-bold text-on-surface mb-xl">Why Choose Us</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <!-- Card 1 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">article</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Strategic Content Planning</h3>
+                    <p class="text-on-surface-variant text-body-md">We create well-planned content that matches your brand voice and business goals.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible delay-100">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">palette</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Creative Post Design</h3>
+                    <p class="text-on-surface-variant text-body-md">Attractive graphics and engaging captions to capture attention.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible delay-200">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">campaign</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Targeted Advertising Campaigns</h3>
+                    <p class="text-on-surface-variant text-body-md">Reach the right audience based on location, interests, and behavior.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">event_available</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Consistent Brand Presence</h3>
+                    <p class="text-on-surface-variant text-body-md">Regular posting schedule to keep your audience engaged.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible delay-100">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">trending_up</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Performance Monitoring</h3>
+                    <p class="text-on-surface-variant text-body-md">Track reach, engagement, and conversions with detailed reports.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="group bg-white p-lg rounded-20px shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up visible delay-200">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-md group-hover:bg-secondary/10 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors duration-300">payments</span>
+                    </div>
+                    <h3 class="font-poppins text-title-lg font-bold mb-sm">Affordable Marketing Packages</h3>
+                    <p class="text-on-surface-variant text-body-md">Cost-effective solutions suitable for startups and growing businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Platforms Section -->
+    <section class="py-[80px] bg-white overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-container-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
+            <div class="relative flex justify-center fade-up visible">
+                <div class="absolute -inset-4 bg-primary/5 rounded-[40px] -rotate-3 z-0"></div>
+                <img src="assets/images/digital_marketing.png" alt="Social Media Marketing Illustration" class="relative z-10 w-full max-w-[500px] h-auto object-contain rounded-lg">
+            </div>
+            <div class="fade-up visible delay-200 space-y-lg">
+                <h2 class="font-poppins text-[32px] font-bold text-primary">Our Social Media Marketing Services Include</h2>
+                <ul class="space-y-md font-medium text-on-surface">
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Social Media Strategy Development</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Facebook Marketing</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Instagram Marketing</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Paid Ad Campaign Management</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Content Creation & Graphic Design</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Reel & Video Marketing</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Audience Engagement</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Lead Generation Campaigns</span>
+                    </li>
+                    <li class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">thumb_up</span>
+                        <span>Monthly Analytics & Reporting</span>
+                    </li>
+                </ul>
+
+                <!-- Platforms We Manage -->
+                <div class="pt-lg">
+                    <h3 class="font-poppins text-[22px] font-bold text-primary mb-md">Platforms We Manage</h3>
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <!-- Facebook -->
+                        <div class="w-12 h-12 rounded-full bg-[#1877f2] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer" title="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <!-- YouTube -->
+                        <div class="w-12 h-12 rounded-full bg-[#ff0000] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer" title="YouTube">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <!-- LinkedIn -->
+                        <div class="w-12 h-12 rounded-full bg-[#0077b5] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer" title="LinkedIn">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <!-- Instagram -->
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer" title="Instagram">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </div>
+                        <!-- Twitter -->
+                        <div class="w-12 h-12 rounded-full bg-[#1da1f2] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer" title="Twitter">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#001e2d] pt-20 pb-8 text-on-tertiary">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto mb-20">
+        <div class="space-y-8">
+            <a href="index.html" class="inline-block"><img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto"></a>
+            <p class="text-surface-variant/70 text-lg leading-relaxed font-medium">
+                Zigma Software, Erode is a trusted digital solutions company delivering web, mobile app, and software solutions to grow your business.
+            </p>
+            <div class="flex gap-4">
+                <a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+                    <span class="material-symbols-outlined">public</span>
+                </a>
+                <a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+                    <span class="material-symbols-outlined">share</span>
+                </a>
+                <a class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-white" href="#">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Get In Touch</h4>
+            <ul class="space-y-6 text-surface-variant/80 font-medium">
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined text-secondary shrink-0">location_on</span>
+                    <span class="">Door No: 4/1c.12-A, Annamalai Gounder Layout, 1st Floor, Near Hotel Vignesh, Mettur Road, Erode. Tamil Nadu, India</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined text-secondary shrink-0">phone</span>
+                    <span class="">+91-9942364454, 9791902386</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined text-secondary shrink-0">mail</span>
+                    <span class="">info@zigmasoftware.in</span>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Important Links</h4>
+            <ul class="space-y-4 font-medium">
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="about.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> About Us</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="products.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Products</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Services</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="blog.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Blogs</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="contact.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl font-black text-white mb-8 border-l-4 border-secondary pl-4">Our Services</h4>
+            <ul class="space-y-4 font-medium">
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
+                <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="border-t border-white/5 pt-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-surface-variant/50 text-sm font-medium">
+        <p class="">© 2024 Zigma Software. All Rights Reserved.</p>
+        <div class="flex gap-8">
+            <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+            <a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Intersection Observer for fade-up animation
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body>
+</html>

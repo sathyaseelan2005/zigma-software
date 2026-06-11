@@ -3,6 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>ZIGMA SOFTWARE | Your Trusted Digital Solution Partner</title>
 <script src="assets/js/tailwind.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
@@ -230,6 +231,61 @@
         .color-bg-amber:hover { background-color: #fef3c7; }
         .color-bg-indigo { background-color: #eef2ff; }
         .color-bg-indigo:hover { background-color: #e0e7ff; }
+
+        /* Our Clients responsive layout */
+        .clients-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            width: 100%;
+        }
+        
+        .client-card {
+            width: 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        /* Desktop breakpoint (1200px+) */
+        @media (min-width: 1200px) {
+            .client-card {
+                width: calc((100% - 4 * 24px) / 5);
+                max-width: 224px; /* Matches original w-56 */
+            }
+            .clients-container {
+                flex-wrap: nowrap; /* Prevent wrap on desktop */
+            }
+        }
+
+        /* Tablet breakpoint (768px-1199px) */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .client-card {
+                width: calc((100% - 2 * 24px) / 3);
+                max-width: 224px;
+            }
+        }
+
+        /* Mobile breakpoint (<768px) */
+        @media (min-width: 480px) and (max-width: 767px) {
+            .client-card {
+                width: calc((100% - 16px) / 2);
+                max-width: 224px;
+            }
+            .clients-container {
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .client-card {
+                width: 100%;
+                max-width: 224px;
+            }
+            .clients-container {
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body class="bg-surface font-body-md text-on-surface selection:bg-primary selection:text-white">
@@ -249,7 +305,7 @@
 <a href="index.html" class="flex items-center gap-base cursor-pointer shrink-0">
 <img src="assets/images/logo.png" alt="Zigma Software Logo" class="h-14 w-auto object-contain">
 </a>
-<div class="hidden lg:flex items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
+    <div class="hidden lg:flex nav-links items-center gap-md xl:gap-xl font-poppins text-label-md h-full">
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="index.html">Home</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="about.html">About Us</a>
 <a class="text-[#00497b] hover:text-[#EC3F43] transition-all duration-200 px-md py-xs rounded font-bold bg-transparent whitespace-nowrap" href="products.html">Products</a>
@@ -264,7 +320,7 @@
     <a href="web-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Web Design & Development</a>
     <a href="mobile-development.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Mobile App Development</a>
     <a href="seo-services.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+    <a href="social-marketing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Social Media Marketing</a>
     <a href="software-support.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary whitespace-nowrap" role="menuitem">Software Support</a>
   </div>
 </div>
@@ -292,7 +348,7 @@
   <a class="text-white hover:text-secondary text-base transition-colors" href="web-development.html">Web Design & Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="mobile-development.html">Mobile App Development</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="seo-services.html">SEO Services</a>
-    <!-- Social Media Marketing removed -->
+  <a class="text-white hover:text-secondary text-base transition-colors" href="social-marketing.html">Social Media Marketing</a>
   <a class="text-white hover:text-secondary text-base transition-colors" href="software-support.html">Software Support</a>
 </div>
 <a class="hover:text-secondary transition-colors" href="customer.html">Customers</a>
@@ -372,7 +428,7 @@
 </div>
 <h3 class="font-title-md text-xl text-primary mb-4 font-bold">Social Media Marketing</h3>
 <p class="text-on-surface-variant mb-8 flex-grow">Strategic social media solutions to grow your brand online.</p>
-<!-- Read More (Social Marketing) removed -->
+<a class="inline-flex items-center gap-2 text-red-600 font-black hover:gap-4 transition-all" href="social-marketing.html">Read More <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 </div>
 </div>
@@ -486,39 +542,39 @@
 </div></section>
 <!-- Our Clients (Colorful Circles) -->
 <section class="py-24 bg-white">
-<div class="px-margin-desktop max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
 <h2 class="text-4xl font-black text-primary mb-16 text-center">OUR CLIENTS</h2>
-<div class="flex flex-wrap justify-center gap-12">
+<div class="clients-container">
 <!-- Client 1: Educational -->
-<div class="vibrant-card color-bg-red p-8 rounded-[3rem] border border-red-100 flex flex-col items-center w-56">
+<div class="vibrant-card color-bg-red p-8 rounded-[3rem] border border-red-100 flex flex-col items-center client-card">
 <div class="p-6 bg-red-500 rounded-full shadow-lg text-white mb-4">
 <span class="material-symbols-outlined text-4xl">school</span>
 </div>
 <span class="text-primary font-black text-center text-sm">Educational Institutions</span>
 </div>
 <!-- Client 2: Chemical -->
-<div class="vibrant-card color-bg-amber p-8 rounded-[3rem] border border-amber-100 flex flex-col items-center w-56">
+<div class="vibrant-card color-bg-amber p-8 rounded-[3rem] border border-amber-100 flex flex-col items-center client-card">
 <div class="p-6 bg-amber-500 rounded-full shadow-lg text-white mb-4">
 <span class="material-symbols-outlined text-4xl">science</span>
 </div>
 <span class="text-primary font-black text-center text-sm">Chemical Agencies</span>
 </div>
 <!-- Client 3: Automobile -->
-<div class="vibrant-card color-bg-blue p-8 rounded-[3rem] border border-blue-100 flex flex-col items-center w-56">
+<div class="vibrant-card color-bg-blue p-8 rounded-[3rem] border border-blue-100 flex flex-col items-center client-card">
 <div class="p-6 bg-blue-500 rounded-full shadow-lg text-white mb-4">
 <span class="material-symbols-outlined text-4xl">engineering</span>
 </div>
 <span class="text-primary font-black text-center text-sm">Automobile Services</span>
 </div>
 <!-- Client 4: Box -->
-<div class="vibrant-card color-bg-teal p-8 rounded-[3rem] border border-teal-100 flex flex-col items-center w-56">
+<div class="vibrant-card color-bg-teal p-8 rounded-[3rem] border border-teal-100 flex flex-col items-center client-card">
 <div class="p-6 bg-teal-500 rounded-full shadow-lg text-white mb-4">
 <span class="material-symbols-outlined text-4xl">package</span>
 </div>
 <span class="text-primary font-black text-center text-sm">Corrugation Manufacturers</span>
 </div>
 <!-- Client 5: Agro -->
-<div class="vibrant-card color-bg-purple p-8 rounded-[3rem] border border-purple-100 flex flex-col items-center w-56">
+<div class="vibrant-card color-bg-purple p-8 rounded-[3rem] border border-purple-100 flex flex-col items-center client-card">
 <div class="p-6 bg-purple-500 rounded-full shadow-lg text-white mb-4">
 <span class="material-symbols-outlined text-4xl">agriculture</span>
 </div>
@@ -582,8 +638,9 @@
 <ul class="space-y-4 font-medium">
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Business Analytics</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="mobile-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Mobile App Dev</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="software-support.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> HRMS &amp; Payroll</a></li>
-<!-- Footer link to Social Marketing removed -->
+<li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="social-marketing.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Social Media Marketing</a></li>
 <li class=""><a class="text-surface-variant/70 hover:text-white transition-all flex items-center gap-3 group" href="web-development.html"><span class="w-2 h-2 bg-secondary rounded-full group-hover:w-6 transition-all"></span> Web Hosting</a></li>
 </ul>
 </div>
