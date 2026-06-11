@@ -44,3 +44,29 @@ body {
   display: block;
   transform: translateY(-3px);
 }
+
+/* Styles for 'Why Choose Us' feature cards */
+.why-card {
+  border: 2px solid #3b4652;
+  border-radius: 8px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+}
+.why-card .icon {
+  font-size: 36px;
+  color: var(--secondary);
+  background: transparent;
+}
+.why-card h4 {
+  margin: 0.5rem 0 0.25rem 0;
+}
+.why-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--on-surface-variant);
+}
