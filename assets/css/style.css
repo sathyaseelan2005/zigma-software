@@ -97,3 +97,10 @@ body {
   color: var(--primary);
   font-weight: 600;
 }
+
+.partner-logo {
+  max-height: 64px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
